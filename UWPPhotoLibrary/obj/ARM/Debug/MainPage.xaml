@@ -1,0 +1,110 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="UWPPhotoLibrary.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPPhotoLibrary"
+     xmlns:data="using:UWPPhotoLibrary.Model1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="20"  Width="800" Height="800"
+          
+          BorderThickness="2" BorderBrush="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Button x:ConnectionId='10'  x:Name="HomeButton"
+                     Content="&#xEA8A;"
+                     FontFamily="Segoe MDL2 Assets"
+                     RelativePanel.AlignLeftWithPanel="True"/>
+        </RelativePanel>
+        <Grid Margin="0,0,0,3" Grid.RowSpan="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" MinHeight="134" />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:ConnectionId='2'  x:Name="HeaderText"
+                       Text="My Photo Album"
+                       FontSize="50"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Grid.Column="1"  Height="106"
+                       />
+
+
+
+            <StackPanel Orientation="Vertical"
+                         Grid.Row="1"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Top"
+                         Padding="2"
+                         Width="300"
+                         Background="BlanchedAlmond" 
+                         >
+                <ItemsControl x:ConnectionId='6' Height="180"                           >
+                    <ItemsControl.ItemTemplate >
+                        <DataTemplate                          >
+                            <Image  x:Name="imageone"
+                                    Width="80"
+                                    Height="80"
+                                     Stretch="Fill"
+                                    Margin="2"
+                                    VerticalAlignment='Top' 
+                                    Source="{Binding  pictureCategotyImage}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <TextBlock Text="sams picture Galary"
+                            FontSize="20"
+                            Margin="20"
+                            Foreground="Brown"
+                            Padding="5"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                <Button x:ConnectionId='7' x:Name="AllPicButton" 
+                         Content="Show By Category"
+                          HorizontalAlignment="Center"
+                           Margin="0,20,0,0" 
+                                                      />
+
+
+
+            </StackPanel>
+
+            <GridView x:ConnectionId='3'  x:Name="PhotoCategory"
+                        Grid.Row="1" Grid.Column="1"
+                       Background="Azure"
+                        IsItemClickEnabled="True"
+                                                  
+                                                            Margin="0,0,0,111" >
+                <GridView.ItemTemplate>
+                    <DataTemplate                          >
+                        <Image x:ConnectionId='5' x:Name="pictureCategotyImage"
+                                 Width="80" Height="80"
+                                                               
+                                />
+
+
+                    </DataTemplate>
+
+                </GridView.ItemTemplate>
+
+            </GridView>
+
+
+
+        </Grid>
+
+
+    </Grid>
+</Page>
+
