@@ -122,6 +122,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model1\Picture.cs" />
+    <Compile Include="Model1\PictureManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +132,28 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Pictures\Cooking\Cooking1.png" />
+    <Content Include="Assets\Pictures\Cooking\Cooking2.png" />
+    <Content Include="Assets\Pictures\Cooking\Cooking3.png" />
+    <Content Include="Assets\Pictures\Cooking\Cooking4.png" />
+    <Content Include="Assets\Pictures\Cooking\Cooking5.png" />
+    <Content Include="Assets\Pictures\Cooking\Holiday1.png" />
+    <Content Include="Assets\Pictures\Family\Family1.png" />
+    <Content Include="Assets\Pictures\Family\Family2.png" />
+    <Content Include="Assets\Pictures\Family\Family3.png" />
+    <Content Include="Assets\Pictures\Family\Family4.png" />
+    <Content Include="Assets\Pictures\Family\Family5.png" />
+    <Content Include="Assets\Pictures\Holidays\Holiday1.png" />
+    <Content Include="Assets\Pictures\Holidays\Holiday2.png" />
+    <Content Include="Assets\Pictures\Holidays\Holiday3.png" />
+    <Content Include="Assets\Pictures\Holidays\Holiday4.png" />
+    <Content Include="Assets\Pictures\Holidays\Holiday5.png" />
+    <Content Include="Assets\Pictures\Holiday\Holiday1.png" />
+    <Content Include="Assets\Pictures\Vacations\Vacation1.png" />
+    <Content Include="Assets\Pictures\Vacations\Vacation2.png" />
+    <Content Include="Assets\Pictures\Vacations\Vacation3.png" />
+    <Content Include="Assets\Pictures\Vacations\Vacation4.png" />
+    <Content Include="Assets\Pictures\Vacations\Vacation5.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -154,6 +178,7 @@
       <Version>6.2.10</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
