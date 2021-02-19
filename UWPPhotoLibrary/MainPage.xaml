@@ -61,7 +61,7 @@
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="data:Picture" >
                             <Image  Name="asdf"
-                                    Width="100" Height="80" 
+                                    Width="100" Height="100" 
                                     Source="{x:Bind PicCategory}"
                                      Stretch="Fill"
                                      HorizontalAlignment="Center"
@@ -82,7 +82,7 @@
                          Background="BlanchedAlmond" 
                          >
 
-                    <TextBlock Text="sams picture Galary"
+                    <TextBlock Text="Team 2's Picture Gallary"
                             FontSize="20"
                             Margin="20"
                             Foreground="Brown"
@@ -108,12 +108,13 @@
                        Background="Azure"
                         IsItemClickEnabled="True"
                         ItemsSource="{x:Bind pic}"
-                        ItemClick="PhotoCategory_ItemClick" Margin="0,0,0,111" Grid.ColumnSpan="2" >
+                        ItemClick="PhotoCategory_ItemClick" Margin="0,0,0,110" Grid.ColumnSpan="2">
 
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Picture">
-                        <Image  Name="aaa"
-                                Width="80" Height="80"
+                        <Image  x:Name="aaa"
+                                Width="120" Height="120"
+                                Stretch="Fill"
                                 Source="{x:Bind PictureFile }" 
                                 />
 

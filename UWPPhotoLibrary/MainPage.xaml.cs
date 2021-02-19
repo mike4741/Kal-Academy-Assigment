@@ -7,10 +7,12 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using UWPPhotoLibrary.Model1;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.WindowManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
@@ -76,6 +78,17 @@ namespace UWPPhotoLibrary
             //var val = e.ClickedItem;
             var val = (Picture)e.ClickedItem;
             PictureManager.GetSinglePictures(pic, val.Category, val.Name);
+            //AppWindow appWindow = await AppWindow.TryCreateAsync();
+            //Frame appWindowContentFrame = new Frame();
+            //appWindowContentFrame.Navigate(typeof(SecondPage);
+            //ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowContentFrame);
+            //await appWindow.TryShowAsync();
+            //AppWindow w = await AppWindow.TryCreateAsync();
+
+            //await w.TryShowAsync();
+            //aaa.Height = 300;
+            //aaa.Width = 300;
+            //Console.WriteLine("I've been clicked!");
             //HeaderText.Text = $"My {val.Category} Album";
             AllPicButton.Content = "Show All Picture";
 

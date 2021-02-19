@@ -61,7 +61,7 @@
                     <GridView.ItemTemplate>
                         <DataTemplate                           >
                             <Image x:ConnectionId='9'  Name="asdf"
-                                    Width="100" Height="80" 
+                                    Width="100" Height="100" 
                                                                  
                                      Stretch="Fill"
                                      HorizontalAlignment="Center"
@@ -82,7 +82,7 @@
                          Background="BlanchedAlmond" 
                          >
 
-                    <TextBlock Text="sams picture Galary"
+                    <TextBlock Text="Team 2's Picture Gallary"
                             FontSize="20"
                             Margin="20"
                             Foreground="Brown"
@@ -108,12 +108,13 @@
                        Background="Azure"
                         IsItemClickEnabled="True"
                                                   
-                                                            Margin="0,0,0,111" Grid.ColumnSpan="2" >
+                                                            Margin="0,0,0,110" Grid.ColumnSpan="2">
 
                 <GridView.ItemTemplate>
                     <DataTemplate                          >
-                        <Image x:ConnectionId='5'  Name="aaa"
-                                Width="80" Height="80"
+                        <Image x:ConnectionId='5'  x:Name="aaa"
+                                Width="120" Height="120"
+                                Stretch="Fill"
                                                                
                                 />
 
