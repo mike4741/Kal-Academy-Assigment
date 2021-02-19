@@ -21,6 +21,10 @@
                      Content="&#xEA8A;"
                      FontFamily="Segoe MDL2 Assets"
                      RelativePanel.AlignLeftWithPanel="True"/>
+            <Image x:Name="aaa" Height="20" Width="20"
+                    RelativePanel.RightOf="HomeButton">
+
+            </Image>
         </RelativePanel>
         <Grid Margin="0,0,0,3" Grid.RowSpan="2" >
             <Grid.RowDefinitions>
@@ -28,21 +32,48 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions >
-                <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="230"/>
+                <ColumnDefinition Width="231*"/>
+                <ColumnDefinition Width="335*"/>
             </Grid.ColumnDefinitions>
 
             <TextBlock  x:Name="HeaderText"
                        Text="My Photo Album"
-                       FontSize="50"
-                       HorizontalAlignment="Center"
+                       FontSize="40"
+                       HorizontalAlignment="Left"
                        VerticalAlignment="Center"
-                       Grid.Column="1"  Height="106"
+                       Grid.Column="1"  Height="62" Grid.ColumnSpan="2" Margin="61,0,0,0" Width="455"
                        />
+            <Grid  Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <GridView  x:Name="a"
+                            IsItemClickEnabled="True"
+                            SelectionMode="None"
+                            Grid.Row="0"
+                            ItemsSource="{x:Bind pic2}"
+                            Background="LightBlue"
+                            Margin="5"
+                           ItemClick="a_ItemClick"
+                             >
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="data:Picture" >
+                            <Image  Name="asdf"
+                                    Width="100" Height="80" 
+                                    Source="{x:Bind PicCategory}"
+                                     Stretch="Fill"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"/>
+                  
 
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
 
+                </GridView>
 
-            <StackPanel Orientation="Vertical"
+                <StackPanel Orientation="vertical"
                          Grid.Row="1"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Top"
@@ -50,27 +81,15 @@
                          Width="300"
                          Background="BlanchedAlmond" 
                          >
-                <ItemsControl Height="180" ItemsSource="{x:Bind pic}">
-                    <ItemsControl.ItemTemplate >
-                        <DataTemplate x:DataType="data:Picture">
-                            <Image  x:Name="imageone"
-                                    Width="80"
-                                    Height="80"
-                                     Stretch="Fill"
-                                    Margin="2"
-                                    VerticalAlignment='Top' 
-                                    Source="{Binding  pictureCategotyImage}"/>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-                <TextBlock Text="sams picture Galary"
+
+                    <TextBlock Text="sams picture Galary"
                             FontSize="20"
                             Margin="20"
                             Foreground="Brown"
                             Padding="5"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"/>
-                <Button x:Name="AllPicButton" 
+                    <Button x:Name="AllPicButton" 
                          Content="Show By Category"
                           HorizontalAlignment="Center"
                            Margin="0,20,0,0" 
@@ -78,21 +97,25 @@
 
 
 
-            </StackPanel>
+                </StackPanel>
+
+            </Grid>
+
+
 
             <GridView  x:Name="PhotoCategory"
                         Grid.Row="1" Grid.Column="1"
                        Background="Azure"
                         IsItemClickEnabled="True"
                         ItemsSource="{x:Bind pic}"
-                        ItemClick="PhotoCategory_ItemClick" Margin="0,0,0,111" >
+                        ItemClick="PhotoCategory_ItemClick" Margin="0,0,0,111" Grid.ColumnSpan="2" >
+
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Picture">
-                        <Image x:Name="pictureCategotyImage"
-                                 Width="80" Height="80"
-                                 Source="{x:Bind PictureFile}" 
+                        <Image  Name="aaa"
+                                Width="80" Height="80"
+                                Source="{x:Bind PictureFile }" 
                                 />
-
 
                     </DataTemplate>
 

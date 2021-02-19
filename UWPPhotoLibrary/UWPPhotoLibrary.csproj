@@ -132,6 +132,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Icons\Family.png" />
+    <Content Include="Assets\Icons\Holidays.png" />
+    <Content Include="Assets\Icons\Cooking.png" />
+    <Content Include="Assets\Icons\Vacations.png" />
     <Content Include="Assets\Pictures\Cooking\Cooking1.png" />
     <Content Include="Assets\Pictures\Cooking\Cooking2.png" />
     <Content Include="Assets\Pictures\Cooking\Cooking3.png" />
@@ -148,7 +152,6 @@
     <Content Include="Assets\Pictures\Holidays\Holiday3.png" />
     <Content Include="Assets\Pictures\Holidays\Holiday4.png" />
     <Content Include="Assets\Pictures\Holidays\Holiday5.png" />
-    <Content Include="Assets\Pictures\Holiday\Holiday1.png" />
     <Content Include="Assets\Pictures\Vacations\Vacation1.png" />
     <Content Include="Assets\Pictures\Vacations\Vacation2.png" />
     <Content Include="Assets\Pictures\Vacations\Vacation3.png" />

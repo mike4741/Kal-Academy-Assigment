@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-O7AHR99</Machine>
-    <WindowsUser>Rachel</WindowsUser>
+    <Machine>A</Machine>
+    <WindowsUser>Administrator</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>2ba16ea2-20af-4e6f-a81c-63f04252cc07</PackageIdentityName>
     <PackageIdentityPublisher>CN=Administrator</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>DB5DBEB1B1FF3B124F30B2CFE58D882692D1B143E0583022E5F44D37F45C856C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2ba16ea2-20af-4e6f-a81c-63f04252cc07_1.0.0.0_x86__75cr2b68sm664</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2ba16ea2-20af-4e6f-a81c-63f04252cc07_75cr2b68sm664!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-18T14:43:57.758</Modified>
+      <Modified>2021-02-19T01:46:20.679</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\UWPPhotoLibrary.exe">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\UWPPhotoLibrary.exe">
       <PackagePath>entrypoint\UWPPhotoLibrary.exe</PackagePath>
-      <Modified>2021-02-18T14:43:57.344</Modified>
+      <Modified>2021-02-19T01:46:19.514</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,155 +46,167 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-19T00:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking1.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Icons\Family.png">
+      <PackagePath>Assets\Icons\Family.png</PackagePath>
+      <Modified>2021-02-18T18:30:10.653</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Icons\Holidays.png">
+      <PackagePath>Assets\Icons\Holidays.png</PackagePath>
+      <Modified>2021-02-18T18:31:39.551</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Icons\Cooking.png">
+      <PackagePath>Assets\Icons\Cooking.png</PackagePath>
+      <Modified>2021-02-18T18:33:09.450</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Icons\Vacations.png">
+      <PackagePath>Assets\Icons\Vacations.png</PackagePath>
+      <Modified>2021-02-18T18:32:12.141</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking1.png">
       <PackagePath>Assets\Pictures\Cooking\Cooking1.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.433</Modified>
+      <Modified>2021-02-17T01:33:20.097</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking2.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking2.png">
       <PackagePath>Assets\Pictures\Cooking\Cooking2.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.455</Modified>
+      <Modified>2021-02-17T01:33:20.100</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking3.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking3.png">
       <PackagePath>Assets\Pictures\Cooking\Cooking3.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.475</Modified>
+      <Modified>2021-02-17T01:33:20.104</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking4.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking4.png">
       <PackagePath>Assets\Pictures\Cooking\Cooking4.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.488</Modified>
+      <Modified>2021-02-17T01:33:20.108</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking5.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Cooking\Cooking5.png">
       <PackagePath>Assets\Pictures\Cooking\Cooking5.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.510</Modified>
+      <Modified>2021-02-17T01:33:20.114</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Cooking\Holiday1.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Cooking\Holiday1.png">
       <PackagePath>Assets\Pictures\Cooking\Holiday1.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.515</Modified>
+      <Modified>2021-02-17T19:00:02.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Family\Family1.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Family\Family1.png">
       <PackagePath>Assets\Pictures\Family\Family1.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.552</Modified>
+      <Modified>2021-02-17T01:33:20.121</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Family\Family2.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Family\Family2.png">
       <PackagePath>Assets\Pictures\Family\Family2.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.569</Modified>
+      <Modified>2021-02-17T01:33:20.125</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Family\Family3.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Family\Family3.png">
       <PackagePath>Assets\Pictures\Family\Family3.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.603</Modified>
+      <Modified>2021-02-17T01:33:20.129</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Family\Family4.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Family\Family4.png">
       <PackagePath>Assets\Pictures\Family\Family4.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.618</Modified>
+      <Modified>2021-02-17T01:33:20.131</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Family\Family5.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Family\Family5.png">
       <PackagePath>Assets\Pictures\Family\Family5.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.641</Modified>
+      <Modified>2021-02-17T01:33:20.135</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday1.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday1.png">
       <PackagePath>Assets\Pictures\Holidays\Holiday1.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.648</Modified>
+      <Modified>2021-02-17T01:33:20.139</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday2.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday2.png">
       <PackagePath>Assets\Pictures\Holidays\Holiday2.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.667</Modified>
+      <Modified>2021-02-17T01:33:20.143</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday3.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday3.png">
       <PackagePath>Assets\Pictures\Holidays\Holiday3.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.686</Modified>
+      <Modified>2021-02-17T01:33:20.146</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday4.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday4.png">
       <PackagePath>Assets\Pictures\Holidays\Holiday4.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.707</Modified>
+      <Modified>2021-02-17T01:33:20.149</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday5.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Holidays\Holiday5.png">
       <PackagePath>Assets\Pictures\Holidays\Holiday5.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.729</Modified>
+      <Modified>2021-02-17T01:33:20.152</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Holiday\Holiday1.png">
-      <PackagePath>Assets\Pictures\Holiday\Holiday1.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.644</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation1.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation1.png">
       <PackagePath>Assets\Pictures\Vacations\Vacation1.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.753</Modified>
+      <Modified>2021-02-17T01:33:20.062</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation2.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation2.png">
       <PackagePath>Assets\Pictures\Vacations\Vacation2.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.788</Modified>
+      <Modified>2021-02-17T01:33:20.077</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation3.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation3.png">
       <PackagePath>Assets\Pictures\Vacations\Vacation3.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.825</Modified>
+      <Modified>2021-02-17T01:33:20.084</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation4.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation4.png">
       <PackagePath>Assets\Pictures\Vacations\Vacation4.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.842</Modified>
+      <Modified>2021-02-17T01:33:20.089</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation5.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Pictures\Vacations\Vacation5.png">
       <PackagePath>Assets\Pictures\Vacations\Vacation5.png</PackagePath>
-      <Modified>2021-02-18T14:07:44.863</Modified>
+      <Modified>2021-02-17T01:33:20.092</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-02-16T19:50:27.994</Modified>
+      <Modified>2021-02-06T23:43:09.952</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-16T19:50:27.994</Modified>
+      <Modified>2021-02-06T23:43:09.966</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-16T19:50:27.995</Modified>
+      <Modified>2021-02-06T23:43:09.970</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-16T19:50:27.996</Modified>
+      <Modified>2021-02-06T23:43:09.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-16T19:50:27.996</Modified>
+      <Modified>2021-02-06T23:43:09.977</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-16T19:50:27.997</Modified>
+      <Modified>2021-02-06T23:43:09.983</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-16T19:50:27.998</Modified>
+      <Modified>2021-02-06T23:43:09.987</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-02-16T19:50:28.001</Modified>
+      <Modified>2021-02-15T22:00:22.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\UWPPhotoLibrary.xr.xml">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\UWPPhotoLibrary.xr.xml">
       <PackagePath>UWPPhotoLibrary.xr.xml</PackagePath>
-      <Modified>2021-02-18T14:07:45.314</Modified>
+      <Modified>2021-02-18T23:27:28.306</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-02-18T14:43:57.269</Modified>
+      <Modified>2021-02-19T00:52:46.788</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-02-18T14:43:57.269</Modified>
+      <Modified>2021-02-19T01:46:19.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T23:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-02-18T14:17:35.648</Modified>
+      <Modified>2021-02-18T18:57:34.343</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\Core\UWPPhotoLibrary.exe">
+    <AppxPackagedFile Include="D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\Core\UWPPhotoLibrary.exe">
       <PackagePath>UWPPhotoLibrary.exe</PackagePath>
-      <Modified>2021-02-18T14:43:57.752</Modified>
+      <Modified>2021-02-19T01:46:20.661</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

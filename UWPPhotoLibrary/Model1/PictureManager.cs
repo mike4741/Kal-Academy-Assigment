@@ -11,12 +11,27 @@ namespace UWPPhotoLibrary.Model1
    public static class PictureManager
     {
 
+
+        public static void GetAllCategory(ObservableCollection<Picture> picCat)
+        {
+            var allPicCat = getPicCategory();
+            picCat.Clear();
+            allPicCat.ForEach(pic => picCat.Add(pic));
+
+        }
         public static void GetAllPicture(ObservableCollection<Picture> pictures)
         {
             var allpics = getAllPicture();
             pictures.Clear();
             allpics.ForEach (pic => pictures.Add(pic)) ;
 
+        }
+        public static void GetSinglePictures(ObservableCollection<Picture> pictures, PictureCategory category , string picname)
+        {
+            var allpics = getAllPicture();
+            var filteredPictures = allpics.Where(pic => pic.Category == category && pic.Name == picname).ToList();
+            pictures.Clear();
+            filteredPictures.ForEach(pic => pictures.Add(pic));
         }
 
         public static void GetPicturesByCategory(ObservableCollection<Picture> pictures, PictureCategory category)
@@ -25,6 +40,17 @@ namespace UWPPhotoLibrary.Model1
             var filteredPictures = allpics.Where(pic => pic.Category == category).ToList();
             pictures.Clear();
             filteredPictures.ForEach(pic => pictures.Add(pic));
+        }
+        private static List<Picture> getPicCategory()
+        {
+            var cpic = new List<Picture>();
+            cpic.Add(new Picture("Cooking", PictureCategory.Cooking));
+            cpic.Add(new Picture("Family", PictureCategory.Family));
+            cpic.Add(new Picture("Holidays", PictureCategory.Holidays));
+            cpic.Add(new Picture("Vacations", PictureCategory.Vacations));
+
+            return cpic;
+
         }
         private  static List<Picture> getAllPicture()
         {

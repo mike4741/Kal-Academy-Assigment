@@ -1,1 +1,1 @@
-C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\UWPPhotoLibrary.csproj;x86
+D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\UWPPhotoLibrary.csproj;x86

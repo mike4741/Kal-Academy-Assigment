@@ -1,4 +1,8 @@
 WinMetadata\Windows.winmd
+Assets\Icons\Cooking.png
+Assets\Icons\Family.png
+Assets\Icons\Holidays.png
+Assets\Icons\Vacations.png
 Assets\LockScreenLogo.scale-200.png
 Assets\Pictures\Cooking\Cooking1.png
 Assets\Pictures\Cooking\Cooking2.png
@@ -11,7 +15,6 @@ Assets\Pictures\Family\Family2.png
 Assets\Pictures\Family\Family3.png
 Assets\Pictures\Family\Family4.png
 Assets\Pictures\Family\Family5.png
-Assets\Pictures\Holiday\Holiday1.png
 Assets\Pictures\Holidays\Holiday1.png
 Assets\Pictures\Holidays\Holiday2.png
 Assets\Pictures\Holidays\Holiday3.png

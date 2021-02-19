@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -25,14 +26,17 @@ namespace UWPPhotoLibrary
     public sealed partial class MainPage : Page
     {
         private ObservableCollection<Picture> pic;
-        private List<Picture> pic2;
+        private ObservableCollection<Picture> pic2;
+        // private List<Picture> pic2;
         public MainPage()
         {
             this.InitializeComponent();
             pic = new ObservableCollection<Picture>();
+            pic2 = new ObservableCollection<Picture>();
             PictureManager.GetAllPicture(pic);
+            PictureManager.GetAllCategory(pic2);
 
-            pic2 = new List<Picture>();
+           // pic2 = new List<Picture>();
 
         }
 
@@ -48,15 +52,19 @@ namespace UWPPhotoLibrary
 
         private void AllPicButton_Click(object sender, RoutedEventArgs e)
         {
-             if (AllPicButton.Content.ToString() == "Show All Picture")
+           
+
+            if (HeaderText.Text != "ALL Albums")
             {
                 AllPicButton.Content = "Show By Category";
                 HeaderText.Text = " ALL Albums ";
+                PictureManager.GetAllPicture(pic);
+
             }
-             else if (AllPicButton.Content.ToString() == "Show By Category")
+             else 
             { 
                 AllPicButton.Content = "Show All Picture";
-                HeaderText.Text = " My ****Albums ";
+               // HeaderText.Text = " My ****Albums ";
                 
             }
             
@@ -65,20 +73,20 @@ namespace UWPPhotoLibrary
         private void PhotoCategory_ItemClick(object sender, ItemClickEventArgs e)
 
         {
-            var pics = (Picture)e.ClickedItem;
-            //var name = pics.Name;
-            //var cat = pics.Category;
-            //pic2 = new List<Picture>();
-            //var dat = PictureManager.SelectedPicture(pic2, cat, name);
-            HeaderText.Text = pics.Name;
-            //pictureCategotyImage.
-            //ownerImage1.
-            // HeaderText.source
-           // pictureCategotyImage.Source = new Uri(BaseUri, pics.PictureFile);
-
+            //var val = e.ClickedItem;
+            var val = (Picture)e.ClickedItem;
+            PictureManager.GetSinglePictures(pic, val.Category, val.Name);
+            //HeaderText.Text = $"My {val.Category} Album";
+            AllPicButton.Content = "Show All Picture";
 
         }
 
-       
+        private void a_ItemClick(object sender, ItemClickEventArgs e)
+        {
+           var val =  (Picture)e.ClickedItem;
+            PictureManager.GetPicturesByCategory(pic, val.Category);
+            HeaderText.Text = $"My {val.Category} Album";
+            AllPicButton.Content = "Show All Picture";
+        }
     }
 }

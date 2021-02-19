@@ -11,21 +11,21 @@ namespace UWPPhotoLibrary.Model1
         Cooking,
         Family,
         Holidays,
-        Vacations,
-        Holiday
+        Vacations
     }
   public class Picture
     {
         public string Name { get; set; }
         public PictureCategory Category { get; set; }
         public string PictureFile { get; set; }
+        public string PicCategory { get; set; }
 
         public Picture( string name , PictureCategory category)
         {
             Name = name;
             Category = category;
             PictureFile = $"/Assets/Pictures/{Category}/{Name}.png";
-        
+            PicCategory = $"/Assets/Icons/{Category}.png";
         }
 
     }
