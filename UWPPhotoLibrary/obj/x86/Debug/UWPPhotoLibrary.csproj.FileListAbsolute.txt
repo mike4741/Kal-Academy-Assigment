@@ -93,3 +93,8 @@ D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\SinglePhoto
 D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.xaml
 D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.xbf
 D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\SinglePhotos.xbf
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\SinglePhotos.xbf
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.g.i.cs
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.g.cs
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.xaml
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.xbf

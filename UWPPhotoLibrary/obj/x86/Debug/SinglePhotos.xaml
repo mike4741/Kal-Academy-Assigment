@@ -9,14 +9,17 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="20"  Width="800" Height="800"
+    <Grid Margin="165,20,240,52"
           
           BorderThickness="2" BorderBrush="Black" >
         <Grid.RowDefinitions>
             <RowDefinition  Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="490*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
-        <RelativePanel>
+        <RelativePanel Margin="26,26,26,2" Grid.RowSpan="2">
             <Button x:ConnectionId='6'  x:Name="SinglePhotoHomeButton"
                      Content="&#xEA8A;"
                      FontFamily="Segoe MDL2 Assets"
@@ -24,20 +27,24 @@
                                                          />
         </RelativePanel>
 
-        <StackPanel Grid.Row ="1" Height="769" Margin="2,0,2,-2" VerticalAlignment="Bottom">
+        <StackPanel Grid.Row ="1" Margin="32,35,34,0" VerticalAlignment="Top" Height="19">
             <TextBlock x:ConnectionId='5' HorizontalAlignment="Center" Name="greeting" Text=" the value "/>
         </StackPanel>
 
 
+
+
+
+
         <GridView x:ConnectionId='2'   x:Name="PhotoCatexgory"
-                        Grid.Row="1"
+                        Grid.Row="2"
                         Background="Azure"
                         IsItemClickEnabled="True"
                                                         
                          
-                        Margin="102,0,98,0" 
-                         VerticalAlignment="Center" IncrementalLoadingTrigger="Edge"
-                      Height="507" Width="600">
+                        Margin="16,18,14,0" 
+                        VerticalAlignment="Top" IncrementalLoadingTrigger="Edge"
+                        Height="438">
 
             <GridView.ItemTemplate  >
                 <DataTemplate   x:Name="cc"
@@ -56,6 +63,13 @@
 
 
         </GridView>
+        <GridView Grid.Row="3" Margin="14,16,10,0" >
+            <TextBox Header="Describe the photo:" PlaceholderText="Name" AcceptsReturn="False" Width="148"/>
+            <ToggleButton Content="Save as album cover" Width="144"/>
+        </GridView>
+
+
+
     </Grid>
 </Page>
 

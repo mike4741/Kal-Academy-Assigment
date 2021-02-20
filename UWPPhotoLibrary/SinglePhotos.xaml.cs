@@ -58,6 +58,16 @@ namespace UWPPhotoLibrary
             }
             base.OnNavigatedTo(e);
         }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PhotoCatexgory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
         //protected override void GetSinglePic(NavigationEventArgs e, Picture pic)
         //{ 
         //    var val = pic;
