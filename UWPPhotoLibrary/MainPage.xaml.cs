@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UWPPhotoLibrary.Model1;
+using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -36,9 +37,40 @@ namespace UWPPhotoLibrary
             PictureManager.GetAllPicture(pic);
             PictureManager.GetAllCategory(pic2);
 
-           // pic2 = new List<Picture>();
+            // pic2 = new List<Picture>();
 
         }
+        //protected override void OnLaunched(LaunchActivatedEventArgs e)
+        //{
+        //    Frame rootFrame = Window.Current.Content as Frame;
+
+        //    // Do not repeat app initialization when the Window already has content,
+        //    // just ensure that the window is active
+        //    if (rootFrame == null)
+        //    {
+        //        // Create a Frame to act as the navigation context and navigate to the first page
+        //        rootFrame = new Frame();
+        //        rootFrame.NavigationFailed += OnNavigationFailed;
+
+        //        if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+        //        {
+        //            //TODO: Load state from previously suspended application
+        //        }
+
+        //        // Place the frame in the current Window
+        //        Window.Current.Content = rootFrame;
+        //    }
+
+        //    if (rootFrame.Content == null)
+        //    {
+        //        // When the navigation stack isn't restored navigate to the first page,
+        //        // configuring the new page by passing required information as a navigation
+        //        // parameter
+        //        rootFrame.Navigate(typeof(BlankPage1), e.Arguments);
+        //    }
+        //    // Ensure the current window is active
+        //    Window.Current.Activate();
+        //}
 
         private void photoalbem_Navigating(object sender, NavigatingCancelEventArgs e)
         {
@@ -48,6 +80,10 @@ namespace UWPPhotoLibrary
         private void photoalbem_Navigated(object sender, NavigationEventArgs e)
         {
             
+        }
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            //this.Frame.Navigate(typeof(BlankPage2));
         }
 
         private void AllPicButton_Click(object sender, RoutedEventArgs e)
@@ -73,11 +109,17 @@ namespace UWPPhotoLibrary
         private void PhotoCategory_ItemClick(object sender, ItemClickEventArgs e)
 
         {
-            //var val = e.ClickedItem;
             var val = (Picture)e.ClickedItem;
-            PictureManager.GetSinglePictures(pic, val.Category, val.Name);
+            this.Frame.Navigate(typeof(SinglePhotos),val.Name);
+            //var val = e.ClickedItem;
+          //val  var val = (Picture)e.ClickedItem;
+            SinglePhotos s = new SinglePhotos();
+           // s.getSinglePic(val);
+            // PictureManager.GetSinglePictures(pic, val.Category, val.Name);
+
             //HeaderText.Text = $"My {val.Category} Album";
             AllPicButton.Content = "Show All Picture";
+          
 
         }
 

@@ -49,6 +49,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Background" />
@@ -57,6 +58,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="SelectionMode" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="IncrementalLoadingTrigger" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
       <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
@@ -80,6 +85,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -89,5 +96,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="UWPPhotoLibrary.MainPage" />
+    <RootType FullName="UWPPhotoLibrary.SinglePhotos" />
   </Roots.RootTypes>
 </Roots>

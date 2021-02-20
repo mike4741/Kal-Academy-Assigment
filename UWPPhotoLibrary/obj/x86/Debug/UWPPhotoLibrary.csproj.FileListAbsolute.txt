@@ -88,3 +88,8 @@ C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\De
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json
+D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.g.i.cs
+D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.g.cs
+D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.xaml
+D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\obj\x86\Debug\SinglePhotos.xbf
+D:\kal Academy\Git-kal\UWPPhotoLibrary\UWPPhotoLibrary\bin\x86\Debug\SinglePhotos.xbf

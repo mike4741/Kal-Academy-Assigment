@@ -66,7 +66,7 @@
                                      Stretch="Fill"
                                      HorizontalAlignment="Center"
                                      VerticalAlignment="Center"/>
-                  
+
 
                         </DataTemplate>
                     </GridView.ItemTemplate>
@@ -95,25 +95,19 @@
                            Margin="0,20,0,0" 
                                                       />
 
-
-
                 </StackPanel>
-
             </Grid>
-
-
-
             <GridView x:ConnectionId='3'  x:Name="PhotoCategory"
                         Grid.Row="1" Grid.Column="1"
-                       Background="Azure"
+                        Background="Azure"
                         IsItemClickEnabled="True"
+                       
                                                   
                                                             Margin="0,0,0,111" Grid.ColumnSpan="2" >
 
-                <GridView.ItemTemplate>
-                    <DataTemplate                          >
-                        <Image x:ConnectionId='5'  Name="aaa"
-                                Width="80" Height="80"
+                <GridView.ItemTemplate >
+                    <DataTemplate   x:Name="cc"                          >
+                        <Image x:ConnectionId='5'  Name="aaa"                                Width="80" Height="80"
                                                                
                                 />
 
