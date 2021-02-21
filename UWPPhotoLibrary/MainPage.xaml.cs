@@ -29,6 +29,7 @@ namespace UWPPhotoLibrary
         private ObservableCollection<Picture> pic;
         private ObservableCollection<Picture> pic2;
         public string NameFromButton { get; set; }
+
         // private List<Picture> pic2;
         public MainPage()
         {
@@ -38,14 +39,54 @@ namespace UWPPhotoLibrary
             PictureManager.GetAllPicture(pic);
             PictureManager.GetAllCategory(pic2);
 
-            // pic2 = new List<Picture>();
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+
+            if (String.IsNullOrEmpty(nameInput.Text))
+            {
+                if (String.IsNullOrEmpty(NameFromButton))
+                {
+                    NameButtonOutput.Text = "Please enter your name.";
+                }
+
+                else
+                {
+                    NameButtonOutput.Text = "This is " + NameFromButton + "'s Photo Gallery!";
+                }
+            }
+
+            else
+            {
+                NameButtonOutput.Text = "This is " + nameInput.Text + "'s Photo Gallery!";
+                NameFromButton = nameInput.Text;
+            }
 
         }
 
         private void NameButton_Click(object sender, RoutedEventArgs e)
         {
-            NameButtonOutput.Text = "This is " + nameInput.Text + "'s Photo Gallery!";
-            NameFromButton = NameButtonOutput.Text;
+            //NameFromButton = nameInput.Text;
+            //NameButtonOutput.Text = "This is " + NameFromButton + "'s Photo Gallery!";
+
+            if (String.IsNullOrEmpty(nameInput.Text))
+            {
+                if (String.IsNullOrEmpty(NameFromButton))
+                {
+                    NameButtonOutput.Text = "Please enter your name.";
+                }
+
+                else
+                {
+                    NameButtonOutput.Text = "This is " + NameFromButton + "'s Photo Gallery!";
+                }
+            }
+                
+            else 
+            {
+                NameButtonOutput.Text = "This is " + nameInput.Text + "'s Photo Gallery!";
+                NameFromButton = nameInput.Text;
+            }
+
+
         }
 
         private void photoalbem_Navigating(object sender, NavigatingCancelEventArgs e)

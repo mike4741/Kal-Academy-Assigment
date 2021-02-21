@@ -64,7 +64,7 @@
                         <DataTemplate x:DataType="data:Picture" >
                             <Image  Name="asdf"
                                     Width="100" Height="80" 
-                                    Source="{x:Bind PicCategory}"
+                                    Source="{x:Bind AlbumCoverPhoto}"
                                      Stretch="Fill"
                                      HorizontalAlignment="Center"
                                      VerticalAlignment="Center"/>
@@ -85,7 +85,7 @@
                          Height="200"
                          >
                     <TextBlock x:Name="NameButtonOutput" Margin="40,60" HorizontalAlignment="Left"/>
-                    <StackPanel Orientation="Horizontal" Margin="30,20,0,20">
+                    <StackPanel Orientation="Horizontal" Margin="30,-10,0,20">
                         <TextBox x:Name="nameInput"
                      PlaceholderText="Name"
                      Width="150"/>
@@ -102,7 +102,7 @@
                     <Button x:Name="AllPicButton" 
                          Content="Show By Category"
                           HorizontalAlignment="Center"
-                           Margin="0,160,0,0" 
+                           Margin="0,-15,0,0" 
                             Click="AllPicButton_Click"/>
 
                 </StackPanel>

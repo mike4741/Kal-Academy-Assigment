@@ -18,14 +18,14 @@ namespace UWPPhotoLibrary.Model1
         public string Name { get; set; }
         public PictureCategory Category { get; set; }
         public string PictureFile { get; set; }
-        public string PicCategory { get; set; }
+        public string AlbumCoverPhoto { get; set; }
 
         public Picture( string name , PictureCategory category)
         {
             Name = name;
             Category = category;
             PictureFile = $"/Assets/Pictures/{Category}/{Name}.png";
-            PicCategory = $"/Assets/Icons/{Category}.png";
+            AlbumCoverPhoto = $"/Assets/Icons/{Category}.png";
         }
 
     }
