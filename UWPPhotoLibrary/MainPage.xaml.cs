@@ -28,6 +28,7 @@ namespace UWPPhotoLibrary
     {
         private ObservableCollection<Picture> pic;
         private ObservableCollection<Picture> pic2;
+        public string NameFromButton { get; set; }
         // private List<Picture> pic2;
         public MainPage()
         {
@@ -40,7 +41,13 @@ namespace UWPPhotoLibrary
             // pic2 = new List<Picture>();
 
         }
-        
+
+        private void NameButton_Click(object sender, RoutedEventArgs e)
+        {
+            NameButtonOutput.Text = "This is " + nameInput.Text + "'s Photo Gallery!";
+            NameFromButton = NameButtonOutput.Text;
+        }
+
         private void photoalbem_Navigating(object sender, NavigatingCancelEventArgs e)
         {
 

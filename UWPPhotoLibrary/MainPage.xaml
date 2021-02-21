@@ -58,6 +58,8 @@
                             Margin="5"
                            ItemClick="a_ItemClick"
                              >
+
+
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="data:Picture" >
                             <Image  Name="asdf"
@@ -79,20 +81,28 @@
                          VerticalAlignment="Top"
                          Padding="2"
                          Width="300"
-                         Background="BlanchedAlmond" 
+                         Background="BlanchedAlmond"
+                         Height="200"
                          >
+                    <TextBlock x:Name="NameButtonOutput" Margin="40,60" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal" Margin="30,20,0,20">
+                        <TextBox x:Name="nameInput"
+                     PlaceholderText="Name"
+                     Width="150"/>
+                        <Button Content="Save" Click="NameButton_Click"/>
+                    </StackPanel>
 
-                    <TextBlock Text="sams picture Galary"
+                    <!--<TextBlock Text="sams picture Galary"
                             FontSize="20"
-                            Margin="20"
+                            Margin="0"
                             Foreground="Brown"
                             Padding="5"
                             VerticalAlignment="Center"
-                            HorizontalAlignment="Center"/>
+                            HorizontalAlignment="Center"/>-->
                     <Button x:Name="AllPicButton" 
                          Content="Show By Category"
                           HorizontalAlignment="Center"
-                           Margin="0,20,0,0" 
+                           Margin="0,160,0,0" 
                             Click="AllPicButton_Click"/>
 
                 </StackPanel>
@@ -104,7 +114,9 @@
                        
                         ItemsSource="{x:Bind pic}"
                         ItemClick="PhotoCategory_ItemClick" Margin="0,0,0,111" Grid.ColumnSpan="2" >
-
+                <!--<Grid.Background>
+                    <ImageBrush Stretch="None" ImageSource="Images/background_top.png" AlignmentY="Top" AlignmentX="Center"/>
+                </Grid.Background>-->
                 <GridView.ItemTemplate >
                     <DataTemplate   x:Name="cc" x:DataType="data:Picture">
                         <Image  Name="aaa"                                Width="80" Height="80"

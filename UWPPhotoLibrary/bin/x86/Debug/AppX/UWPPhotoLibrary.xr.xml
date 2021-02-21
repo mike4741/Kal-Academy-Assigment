@@ -48,8 +48,6 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
@@ -85,9 +83,9 @@
       <RootProperty Name="Padding" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -96,13 +94,13 @@
       <RootProperty Name="FontFamily" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="UWPPhotoLibrary.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Header" />
       <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="AcceptsReturn" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="AcceptsReturn" />
     </RootType>
+    <RootType FullName="UWPPhotoLibrary.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.ToggleButton">
       <RootProperty Name="Content" />
       <RootProperty Name="Width" />

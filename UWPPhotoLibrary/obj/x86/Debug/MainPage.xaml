@@ -17,11 +17,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <RelativePanel>
-            <Button x:ConnectionId='10'  x:Name="HomeButton"
+            <Button x:ConnectionId='13'  x:Name="HomeButton"
                      Content="&#xEA8A;"
                      FontFamily="Segoe MDL2 Assets"
                      RelativePanel.AlignLeftWithPanel="True"/>
-            <Image x:ConnectionId='11' x:Name="aaa" Height="20" Width="20"
+            <Image x:ConnectionId='14' x:Name="aaa" Height="20" Width="20"
                     RelativePanel.RightOf="HomeButton">
 
             </Image>
@@ -58,9 +58,11 @@
                             Margin="5"
                                                   
                              >
+
+
                     <GridView.ItemTemplate>
                         <DataTemplate                           >
-                            <Image x:ConnectionId='9'  Name="asdf"
+                            <Image x:ConnectionId='12'  Name="asdf"
                                     Width="100" Height="80" 
                                                                  
                                      Stretch="Fill"
@@ -79,20 +81,28 @@
                          VerticalAlignment="Top"
                          Padding="2"
                          Width="300"
-                         Background="BlanchedAlmond" 
+                         Background="BlanchedAlmond"
+                         Height="200"
                          >
+                    <TextBlock x:ConnectionId='7' x:Name="NameButtonOutput" Margin="40,60" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal" Margin="30,20,0,20">
+                        <TextBox x:ConnectionId='9' x:Name="nameInput"
+                     PlaceholderText="Name"
+                     Width="150"/>
+                        <Button x:ConnectionId='10' Content="Save"                         />
+                    </StackPanel>
 
-                    <TextBlock Text="sams picture Galary"
+                    <!--<TextBlock Text="sams picture Galary"
                             FontSize="20"
-                            Margin="20"
+                            Margin="0"
                             Foreground="Brown"
                             Padding="5"
                             VerticalAlignment="Center"
-                            HorizontalAlignment="Center"/>
-                    <Button x:ConnectionId='7' x:Name="AllPicButton" 
+                            HorizontalAlignment="Center"/>-->
+                    <Button x:ConnectionId='8' x:Name="AllPicButton" 
                          Content="Show By Category"
                           HorizontalAlignment="Center"
-                           Margin="0,20,0,0" 
+                           Margin="0,160,0,0" 
                                                       />
 
                 </StackPanel>
@@ -104,7 +114,9 @@
                        
                                                   
                                                             Margin="0,0,0,111" Grid.ColumnSpan="2" >
-
+                <!--<Grid.Background>
+                    <ImageBrush Stretch="None" ImageSource="Images/background_top.png" AlignmentY="Top" AlignmentX="Center"/>
+                </Grid.Background>-->
                 <GridView.ItemTemplate >
                     <DataTemplate   x:Name="cc"                          >
                         <Image x:ConnectionId='5'  Name="aaa"                                Width="80" Height="80"

@@ -32,7 +32,7 @@ namespace UWPPhotoLibrary
             this.InitializeComponent();
             singlepic = new ObservableCollection<Picture>();
       
-            //PictureManager.GetPictureToSecondPage(singlepic, vax);
+          
         }
 
         private void SinglePhotoHomeButton_Click(object sender, RoutedEventArgs e)
