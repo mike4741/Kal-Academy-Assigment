@@ -234,3 +234,8 @@ D:\kal Academy\Git-kal\samra\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.xaml
 D:\kal Academy\Git-kal\samra\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.xbf
 D:\kal Academy\Git-kal\samra\UWPPhotoLibrary\bin\x86\Debug\SinglePhotoPage.xbf
 D:\kal Academy\Git-kal\samra\UWPPhotoLibrary\obj\x86\Debug\UWPPhotoLibrary.csprojAssemblyReference.cache
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\SinglePhotoPage.xbf
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.g.i.cs
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.g.cs
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.xaml
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.xbf

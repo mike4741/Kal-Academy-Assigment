@@ -50,6 +50,13 @@
                     <Border Background ="SkyBlue"/>
                     <MediaElement Name="MyMediaElement" AutoPlay="True"/>
                     <TextBlock Name="CategoryTextBlock" Text=" My Photo Album" FontFamily="Century Gotthic" FontStyle="Italic"   FontSize="50" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="NameButtonOutput" HorizontalAlignment="Right"/>
+                    <StackPanel Orientation="Horizontal" Margin="30,15,0,20" HorizontalAlignment="Right">
+                        <TextBox x:Name="nameInput"
+                        PlaceholderText="Name"
+                        Width="150"/>
+                        <Button Content="Save" Click="NameButton_Click"/>
+                    </StackPanel>
                     <GridView Grid.Row="1"
                               Name ="PictureGridView"
                               ItemsSource="{x:Bind pictures}"                        

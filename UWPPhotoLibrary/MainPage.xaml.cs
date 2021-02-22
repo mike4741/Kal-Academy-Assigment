@@ -27,8 +27,8 @@ namespace UWPPhotoLibrary
     {
         private ObservableCollection<Picture> pictures;
         private List<MenuItem> menuItems;
+        public string NameFromButton { get; set; }
 
-    
         public MainPage()
         {
             this.InitializeComponent();
@@ -42,6 +42,57 @@ namespace UWPPhotoLibrary
             menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Vacations.png", Category = PictureCategory.Vacations });
 
             BackButton.Visibility = Visibility.Collapsed;
+
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+
+            if (String.IsNullOrEmpty(nameInput.Text))
+            {
+                if (String.IsNullOrEmpty(NameFromButton))
+                {
+                    NameButtonOutput.Text = "Please enter your name.";
+                }
+
+                else
+                {
+                    NameButtonOutput.Text = NameFromButton + "'s Photo Gallery!";
+                }
+            }
+
+            else
+            {
+                NameButtonOutput.Text = nameInput.Text + "'s Photo Gallery!";
+                NameFromButton = nameInput.Text;
+            }
+
+        }
+
+        private void NameButton_Click(object sender, RoutedEventArgs e)
+        {
+            //NameFromButton = nameInput.Text;
+            //NameButtonOutput.Text = "This is " + NameFromButton + "'s Photo Gallery!";
+
+            if (String.IsNullOrEmpty(nameInput.Text))
+            {
+                if (String.IsNullOrEmpty(NameFromButton))
+                {
+                    NameButtonOutput.Text = "Please enter your name.";
+                }
+
+                else
+                {
+                    NameButtonOutput.Text = NameFromButton + "'s Photo Gallery!";
+                    CategoryTextBlock.Text = NameFromButton + "'s Photo Gallery!";
+                }
+            }
+
+            else
+            {
+                NameButtonOutput.Text = nameInput.Text + "'s Photo Gallery!";
+                CategoryTextBlock.Text = nameInput.Text + "'s Photo Gallery!";
+                NameFromButton = nameInput.Text;
+            }
+
+
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -61,7 +112,7 @@ namespace UWPPhotoLibrary
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             PictureManager.GetAllPictures(pictures);
-            CategoryTextBlock.Text = "My Photo Album";
+            CategoryTextBlock.Text = NameFromButton + "'s Photo Gallery!";
             MenuItemsListView.SelectedItem = null;
             BackButton.Visibility = Visibility.Collapsed;
 

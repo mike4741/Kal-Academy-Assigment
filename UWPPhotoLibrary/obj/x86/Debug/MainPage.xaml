@@ -16,9 +16,9 @@
         </Grid.RowDefinitions>
         
         <RelativePanel>
-            <Button x:ConnectionId='13' Content="&#xE700;" RelativePanel.AlignLeftWithPanel="True"
+            <Button x:ConnectionId='16' Content="&#xE700;" RelativePanel.AlignLeftWithPanel="True"
                     FontFamily="Segoe MDL2 Assets" Width="45" Name ="HamburgerButton"                              />
-            <Button x:ConnectionId='14' Content="&#xE0A6;" RelativePanel.RightOf="HamburgerButton"
+            <Button x:ConnectionId='17' Content="&#xE0A6;" RelativePanel.RightOf="HamburgerButton"
                     FontFamily="Segoe MDL2 Assets" Width="45" Name ="BackButton"                          />
         </RelativePanel>
         <SplitView x:ConnectionId='2' Grid.Row="1" Name="MySplitView"
@@ -50,7 +50,14 @@
                     <Border Background ="SkyBlue"/>
                     <MediaElement x:ConnectionId='8' Name="MyMediaElement" AutoPlay="True"/>
                     <TextBlock x:ConnectionId='9' Name="CategoryTextBlock" Text=" My Photo Album" FontFamily="Century Gotthic" FontStyle="Italic"   FontSize="50" HorizontalAlignment="Center"/>
-                    <GridView x:ConnectionId='10' Grid.Row="1"
+                    <TextBlock x:ConnectionId='10' x:Name="NameButtonOutput" HorizontalAlignment="Right"/>
+                    <StackPanel Orientation="Horizontal" Margin="30,15,0,20" HorizontalAlignment="Right">
+                        <TextBox x:ConnectionId='14' x:Name="nameInput"
+                        PlaceholderText="Name"
+                        Width="150"/>
+                        <Button x:ConnectionId='15' Content="Save"                         />
+                    </StackPanel>
+                    <GridView x:ConnectionId='11' Grid.Row="1"
                               Name ="PictureGridView"
                                                                                      
                               IsItemClickEnabled="True"
@@ -59,7 +66,7 @@
                         <TextBox />
                         <GridView.ItemTemplate>
                             <DataTemplate                           >
-                                <Image x:ConnectionId='12' Name="MyImage" 
+                                <Image x:ConnectionId='13' Name="MyImage" 
                                        Height="200" Width="150"
                                                                     
                                         />
