@@ -1,0 +1,1 @@
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\UWPPhotoLibrary.csproj;arm

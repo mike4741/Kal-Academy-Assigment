@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="UWPPhotoLibrary.SinglePhotoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPPhotoLibrary"
+    xmlns:data="using:UWPPhotoLibrary.Model1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel>
+            <Button Content="&#xEA8A;"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets" 
+                    Width="45" Name ="HomeButton"
+                    Click="HomeButton_Click"/>
+           
+        </RelativePanel>
+        <GridView   x:Name="PhotoCatexgory"
+                        Grid.Row="1"
+                        Background="Azure"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{x:Bind singlepic}"
+                  
+                         
+                        Margin="102,0,98,0" 
+                         VerticalAlignment="Center" IncrementalLoadingTrigger="Edge"
+                      Height="507" Width="600">
+
+            <GridView.ItemTemplate  >
+                <DataTemplate   x:Name="cc"
+                                 x:DataType="data:Picture"
+                                >
+                    <Image  Name="aaa"  
+                             Stretch="Fill"
+                           
+                                Source="{x:Bind PictureFile }" 
+                                />
+
+
+                </DataTemplate>
+
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
+
+
