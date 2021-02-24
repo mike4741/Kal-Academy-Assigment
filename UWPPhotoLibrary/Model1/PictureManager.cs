@@ -22,6 +22,8 @@ namespace UWPPhotoLibrary.Model1
 
         }
 
+
+
         public static void GetPicturesByCategory(ObservableCollection<Picture> pictures, PictureCategory category)
         {
             var allPictures = getPictures();

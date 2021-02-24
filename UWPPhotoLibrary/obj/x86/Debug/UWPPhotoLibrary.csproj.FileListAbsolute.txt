@@ -55,7 +55,6 @@ C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\De
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\UWPPhotoLibrary.build.appxrecipe
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\System.Runtime.dll
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
-C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\UWPPhotoLibrary.csprojAssemblyReference.cache
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\App.g.i.cs
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\App.g.cs
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\MainPage.g.i.cs
@@ -239,3 +238,4 @@ C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\De
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.g.cs
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.xaml
 C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\SinglePhotoPage.xbf
+C:\Users\rmisu\Documents\GitHub\Kal-Academy-Assigment\UWPPhotoLibrary\obj\x86\Debug\UWPPhotoLibrary.csprojAssemblyReference.cache

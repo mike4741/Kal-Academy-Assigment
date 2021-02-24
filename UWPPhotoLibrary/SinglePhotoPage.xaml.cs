@@ -26,6 +26,7 @@ namespace UWPPhotoLibrary
     /// </summary>
     public sealed partial class SinglePhotoPage : Page
     {
+        public Picture ReplaceCoverPhotoWith { get; set; }
 
         private ObservableCollection<Picture> singlepic;
         private static string vax;
@@ -42,7 +43,6 @@ namespace UWPPhotoLibrary
             if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
             {
                 vax = e.Parameter.ToString();
-              //  greeting.Text = vax;
                 PictureManager.GetPictureToSecondPage(singlepic, vax);
 
             }
@@ -58,6 +58,13 @@ namespace UWPPhotoLibrary
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void ChangeCoverPhotoButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReplaceCoverPhotoWith = new Picture("Cooking2", PictureCategory.Cooking);
+
+            //ChangeCoverPhoto(ReplaceCoverPhotoWith);
         }
     }
 }
