@@ -21,7 +21,7 @@
                     FontFamily="Segoe MDL2 Assets" 
                     Width="45" Name ="HomeButton"
                                             />
-            <Button x:ConnectionId='6' Content="ChangeCoverPhoto" RelativePanel.RightOf="HomeButton"                                     />
+            <!--<Button Content="ChangeCoverPhoto" RelativePanel.RightOf="HomeButton" Click="ChangeCoverPhotoButton_Click"/>-->
 
         </RelativePanel>
         <GridView x:ConnectionId='2'   x:Name="PhotoCatexgory"

@@ -26,20 +26,39 @@
                    CompactPaneLength="120"
                    OpenPaneLength="300">
             <SplitView.Pane>
-                <ListView Name="MenuItemsListView" 
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ListView Name="CoverPhotoListView"
+                              Grid.Row="0"
+                              ItemsSource="{x:Bind coverPhoto}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Picture">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{x:Bind PictureFile}" Height="100" Width="100"/>
+                                    <TextBlock Text="MyCoverPhoto" FontSize="20" Margin="30,40,0,0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <ListView Name="MenuItemsListView" 
+                          Grid.Row="1"
                           IsItemClickEnabled ="True"
-                          ItemsSource="{x:Bind coverPhotos}"
+                          ItemsSource="{x:Bind menuItems}"
                           ItemClick="MenuItemsListView_ItemClick">
                     <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="data:Picture">
+                        <DataTemplate x:DataType="data:MenuItem">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="{x:Bind PictureFile}" Height="100" Width="100"/>
+                                <Image Source="{x:Bind IconFile}" Height="100" Width="100"/>
                                 <TextBlock Text="{x:Bind Category}" FontSize="20" Margin="30,40,0,0" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                    
+
                 </ListView>
+                </Grid>
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>
@@ -67,10 +86,13 @@
                         <TextBox />
                         <GridView.ItemTemplate>
                             <DataTemplate x:DataType ="data:Picture">
-                                <Image Name="MyImage" 
-                                       Height="200" Width="150"
-                                       Source="{x:Bind PictureFile}"
-                                        />
+                                <!--<Grid RightTapped="Grid_RightTapped">-->
+                                    <Image Name="MyImage" 
+                                           Stretch="Fill"
+                                           Height="200" Width="200"
+                                           Source="{x:Bind PictureFile}"
+                                            />
+                                <!--</Grid>-->
                             </DataTemplate>
                         </GridView.ItemTemplate>
                         

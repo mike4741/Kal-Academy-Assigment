@@ -16,9 +16,9 @@
         </Grid.RowDefinitions>
         
         <RelativePanel>
-            <Button x:ConnectionId='16' Content="&#xE700;" RelativePanel.AlignLeftWithPanel="True"
+            <Button x:ConnectionId='20' Content="&#xE700;" RelativePanel.AlignLeftWithPanel="True"
                     FontFamily="Segoe MDL2 Assets" Width="45" Name ="HamburgerButton"                              />
-            <Button x:ConnectionId='17' Content="&#xE0A6;" RelativePanel.RightOf="HamburgerButton"
+            <Button x:ConnectionId='21' Content="&#xE0A6;" RelativePanel.RightOf="HamburgerButton"
                     FontFamily="Segoe MDL2 Assets" Width="45" Name ="BackButton"                          />
         </RelativePanel>
         <SplitView x:ConnectionId='2' Grid.Row="1" Name="MySplitView"
@@ -26,20 +26,39 @@
                    CompactPaneLength="120"
                    OpenPaneLength="300">
             <SplitView.Pane>
-                <ListView x:ConnectionId='3' Name="MenuItemsListView" 
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ListView x:ConnectionId='3' Name="CoverPhotoListView"
+                              Grid.Row="0"
+                                                               >
+                        <ListView.ItemTemplate>
+                            <DataTemplate                          >
+                                <StackPanel x:ConnectionId='10' Orientation="Horizontal">
+                                    <Image x:ConnectionId='11'                               Height="100" Width="100"/>
+                                    <TextBlock Text="MyCoverPhoto" FontSize="20" Margin="30,40,0,0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <ListView x:ConnectionId='4' Name="MenuItemsListView" 
+                          Grid.Row="1"
                           IsItemClickEnabled ="True"
-                                                            
+                                                          
                                                                  >
                     <ListView.ItemTemplate>
-                        <DataTemplate                          >
-                            <StackPanel x:ConnectionId='5' Orientation="Horizontal">
-                                <Image x:ConnectionId='6'                               Height="100" Width="100"/>
-                                <TextBlock x:ConnectionId='7'                          FontSize="20" Margin="30,40,0,0" />
+                        <DataTemplate                           >
+                            <StackPanel x:ConnectionId='6' Orientation="Horizontal">
+                                <Image x:ConnectionId='7'                            Height="100" Width="100"/>
+                                <TextBlock x:ConnectionId='8'                          FontSize="20" Margin="30,40,0,0" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                    
+
                 </ListView>
+                </Grid>
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>
@@ -48,17 +67,17 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Border Background ="SkyBlue"/>
-                    <MediaElement x:ConnectionId='8' Name="MyMediaElement" AutoPlay="True"/>
-                    <TextBlock x:ConnectionId='9' Name="CategoryTextBlock" Text=" My Photo Album" FontFamily="Century Gotthic" FontStyle="Italic"   FontSize="50" HorizontalAlignment="Center"/>
-                    <TextBlock x:ConnectionId='10' x:Name="NameButtonOutput" HorizontalAlignment="Right"/>
+                    <MediaElement x:ConnectionId='12' Name="MyMediaElement" AutoPlay="True"/>
+                    <TextBlock x:ConnectionId='13' Name="CategoryTextBlock" Text=" My Photo Album" FontFamily="Century Gotthic" FontStyle="Italic"   FontSize="50" HorizontalAlignment="Center"/>
+                    <TextBlock x:ConnectionId='14' x:Name="NameButtonOutput" HorizontalAlignment="Right"/>
                     <StackPanel Orientation="Horizontal" Margin="30,15,0,20" HorizontalAlignment="Right">
-                        <TextBox x:ConnectionId='14' x:Name="nameInput"
+                        <TextBox x:ConnectionId='18' x:Name="nameInput"
                         PlaceholderText="Name"
                         Width="150"/>
-                        <Button x:ConnectionId='15' Content="Save"                         />
+                        <Button x:ConnectionId='19' Content="Save"                         />
                         <!--<Button Content="ChangeCoverPhoto" Click="ChangeCoverPhotoButton_Click" />-->
                     </StackPanel>
-                    <GridView x:ConnectionId='11' Grid.Row="1"
+                    <GridView x:ConnectionId='15' Grid.Row="1"
                               Name ="PictureGridView"
                                                                                      
                               IsItemClickEnabled="True"
@@ -67,10 +86,13 @@
                         <TextBox />
                         <GridView.ItemTemplate>
                             <DataTemplate                           >
-                                <Image x:ConnectionId='13' Name="MyImage" 
-                                       Height="200" Width="150"
-                                                                    
-                                        />
+                                <!--<Grid RightTapped="Grid_RightTapped">-->
+                                    <Image x:ConnectionId='17' Name="MyImage" 
+                                           Stretch="Fill"
+                                           Height="200" Width="200"
+                                                                        
+                                            />
+                                <!--</Grid>-->
                             </DataTemplate>
                         </GridView.ItemTemplate>
                         
