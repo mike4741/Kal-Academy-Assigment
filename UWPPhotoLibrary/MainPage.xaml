@@ -28,17 +28,17 @@
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="100" />
+                        <RowDefinition Height="125" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
+                    <TextBlock Text="Cover Photo" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     <ListView Name="CoverPhotoListView"
                               Grid.Row="0"
                               ItemsSource="{x:Bind coverPhoto}">
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="data:Picture">
-                                <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" Margin="0,25,10,0">
                                     <Image Source="{x:Bind PictureFile}" Height="100" Width="100"/>
-                                    <TextBlock Text="MyCoverPhoto" FontSize="20" Margin="30,40,0,0" />
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
