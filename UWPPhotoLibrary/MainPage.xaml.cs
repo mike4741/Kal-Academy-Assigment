@@ -27,7 +27,7 @@ namespace UWPPhotoLibrary
     {
         private ObservableCollection<Picture> pictures;
         private List<MenuItem> menuItems;
-        private ObservableCollection<Picture> coverPhoto;
+        public ObservableCollection<Picture> coverPhoto;
         public string NameFromButton { get; set; }
         public Picture ReplaceCoverPhotoWith { get; set; }
 
@@ -150,28 +150,36 @@ namespace UWPPhotoLibrary
 
         }
 
-        //private void ChangeCoverPhotoButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ReplaceCoverPhotoWith = new Picture("Cooking2", PictureCategory.Cooking);
+        private void PictureGridView_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            //Picture picture = (sender as Grid).DataContext as Picture;
+            //ReplaceCoverPhotoWith = picture;
+            //ChangeCoverPhoto(ReplaceCoverPhotoWith);
+        }
 
-        //    ChangeCoverPhoto(ReplaceCoverPhotoWith);
-        //}
+        public void ChangeCoverPhoto(Picture NewCoverPhoto)
+        {
+            for (int i = 0; i < 1; i++)
+            {
 
-        //public void ChangeCoverPhoto(Picture NewCoverPhoto)
-        //{
-        //    for (int i = 0; i < 4; i++)
-        //    {
-        //        if (coverPhotos[i].Category == NewCoverPhoto.Category)
-        //        {
-        //            coverPhotos[i] = NewCoverPhoto;
-        //        }
+                coverPhoto[i] = NewCoverPhoto;
 
-        //    }
-        //}
+            }
+        }
 
-        //private void Grid_RightTapped(object sender, RightTappedRoutedEventArgs e)
-        //{
-        //    ReplaceCoverPhotoWith = 
-        //}
+
+
+
+        private void Grid_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            ReplaceCoverPhotoWith = (e.OriginalSource as FrameworkElement).DataContext as Picture;
+            ChangeCoverPhoto(ReplaceCoverPhotoWith);
+
+
+
+        }
+
+
+
     }
 }

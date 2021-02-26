@@ -75,24 +75,25 @@
                         PlaceholderText="Name"
                         Width="150"/>
                         <Button Content="Save" Click="NameButton_Click"/>
-                        <!--<Button Content="ChangeCoverPhoto" Click="ChangeCoverPhotoButton_Click" />-->
                     </StackPanel>
                     <GridView Grid.Row="1"
                               Name ="PictureGridView"
                               ItemsSource="{x:Bind pictures}"                        
                               IsItemClickEnabled="True"
                               SelectionMode="Extended"
-                               ItemClick="PictureGridView_ItemClick">
+                              ItemClick="PictureGridView_ItemClick"
+                              IsRightTapEnabled="True"
+                              RightTapped="PictureGridView_RightTapped">
                         <TextBox />
                         <GridView.ItemTemplate>
                             <DataTemplate x:DataType ="data:Picture">
-                                <!--<Grid RightTapped="Grid_RightTapped">-->
+                                <Grid RightTapped="Grid_RightTapped">
                                     <Image Name="MyImage" 
                                            Stretch="Fill"
                                            Height="200" Width="200"
                                            Source="{x:Bind PictureFile}"
                                             />
-                                <!--</Grid>-->
+                                </Grid>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                         

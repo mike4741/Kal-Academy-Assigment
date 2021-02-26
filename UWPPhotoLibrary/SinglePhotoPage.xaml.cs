@@ -60,11 +60,12 @@ namespace UWPPhotoLibrary
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        //private void ChangeCoverPhotoButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ReplaceCoverPhotoWith = new Picture("Cooking2", PictureCategory.Cooking);
-
-        //    //ChangeCoverPhoto(ReplaceCoverPhotoWith);
-        //}
+        private void ChangeCoverPhotoButton_Click(object sender, RoutedEventArgs e)
+        {
+            //ReplaceCoverPhotoWith = new Picture("Cooking2", PictureCategory.Cooking);
+            //coverPhoto = singlepic;
+            
+            
+        }
     }
 }
