@@ -4,66 +4,96 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
 namespace UWPPhotoLibrary.Model1
 {
-   public static class PictureManager
+    public static class PictureManager
     {
-
-
-        public static void GetAllCategory(ObservableCollection<Picture> picCat)
+        // final one 
+        internal static void ChangeCoverPhoto(ObservableCollection<Picture> coverPicture, string name)
         {
-            var allPicCat = getPicCategory();
-            picCat.Clear();
-            allPicCat.ForEach(pic => picCat.Add(pic));
-
-        }
-        public static void GetAllPicture(ObservableCollection<Picture> pictures)
-        {
-            var allpics = getAllPicture();
-            pictures.Clear();
-            allpics.ForEach (pic => pictures.Add(pic)) ;
-
-        }
-        public static void GetSinglePictures(ObservableCollection<Picture> pictures, PictureCategory category , string picname)
-        {
-            var allpics = getAllPicture();
-            var filteredPictures = allpics.Where(pic => pic.Category == category && pic.Name == picname).ToList();
-            pictures.Clear();
-            filteredPictures.ForEach(pic => pictures.Add(pic));
+            var allpics = getPictures();
+            var filteredPictures = allpics.Where(pic => pic.Name == name ).ToList();
+            coverPicture.Clear();
+            filteredPictures.ForEach(pic => coverPicture.Add(pic));
         }
 
-
-        public static void GetPictureToSecondPage(ObservableCollection<Picture> pictures,  string picname)
+        public static void GetAllPictures(ObservableCollection<Picture> pictures)
         {
-            var allpics = getAllPicture();
-            var filteredPictures = allpics.Where(pic => pic.Name == picname).ToList();
+            var allPictures = getPictures();
             pictures.Clear();
-            filteredPictures.ForEach(pic => pictures.Add(pic));
-            //pictures.Clear();
-
+            allPictures.ForEach(picture => pictures.Add(picture));
         }
 
         public static void GetPicturesByCategory(ObservableCollection<Picture> pictures, PictureCategory category)
         {
-            var allpics = getAllPicture();
-            var filteredPictures = allpics.Where(pic => pic.Category == category).ToList();
+            var allPictures = getPictures();
+            var filteredPictures = allPictures.Where(picture => picture.Category == category).ToList();
+            pictures.Clear();
+            filteredPictures.ForEach(picture => pictures.Add(picture));
+        }
+
+        internal static void GetCoverPictures(ObservableCollection<Picture> CoverPicture)
+        {
+            var allPictures = getPictures();
+            var filteredPictures = allPictures.Where(picture => picture.Name == "Family3" ).ToList();
+
+            CoverPicture.Clear();
+            filteredPictures.ForEach(picture => CoverPicture.Add(picture));
+        }
+
+        public static void GetSinglePictures(ObservableCollection<Picture> pictures, PictureCategory category, string picname)
+        {
+            var allpics = getPictures();
+            var filteredPictures = allpics.Where(pic => pic.Category == category && pic.Name == picname).ToList();
             pictures.Clear();
             filteredPictures.ForEach(pic => pictures.Add(pic));
         }
-        private static List<Picture> getPicCategory()
+        public static void GetPictureToSecondPage(ObservableCollection<Picture> pictures, string picname)
         {
-            var cpic = new List<Picture>();
-            cpic.Add(new Picture("Cooking", PictureCategory.Cooking));
-            cpic.Add(new Picture("Family", PictureCategory.Family));
-            cpic.Add(new Picture("Holidays", PictureCategory.Holidays));
-            cpic.Add(new Picture("Vacations", PictureCategory.Vacations));
-
-            return cpic;
+            var allpics = getPictures();
+            var filteredPictures = allpics.Where(pic => pic.Name == picname).ToList();
+            pictures.Clear();
+            filteredPictures.ForEach(pic => pictures.Add(pic));
 
         }
-        private  static List<Picture> getAllPicture()
+        public static void GetNextPicture(ObservableCollection<Picture> pictures,
+                                            string name)
+        {
+
+            var allPictures = getPictures();
+            var filteredPictures = allPictures.ToList();
+            pictures.Clear();
+            filteredPictures.ForEach(pic => pictures.Add(pic));
+            string nextName =name;
+            for (int i = 0; i < pictures.Count; i++)
+            { 
+               
+                if (pictures[i].Name == name)
+                {
+                    if (i == pictures.Count-1)
+                    {
+                        i = 0;
+                        nextName = pictures[i].Name;
+                        break;
+                    }else
+                    {
+                        nextName = pictures[i+1].Name;
+                        break;
+                    }
+                }
+               
+            }
+            filteredPictures = allPictures.Where(pic => pic.Name == nextName).ToList();
+            pictures.Clear();
+            filteredPictures.ForEach(pic => pictures.Add(pic));
+        }
+
+     
+
+        private static List<Picture> getPictures()
         {
             var pictures = new List<Picture>();
             pictures.Add(new Picture("Cooking1", PictureCategory.Cooking));
@@ -91,8 +121,6 @@ namespace UWPPhotoLibrary.Model1
             pictures.Add(new Picture("Vacation3", PictureCategory.Vacations));
             pictures.Add(new Picture("Vacation4", PictureCategory.Vacations));
             pictures.Add(new Picture("Vacation5", PictureCategory.Vacations));
-
-
 
             return pictures;
         }

@@ -3,124 +3,125 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPPhotoLibrary"
-     xmlns:data="using:UWPPhotoLibrary.Model1"
+    xmlns:data="using:UWPPhotoLibrary.Model1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="20"  Width="800" Height="800"
-          
-          BorderThickness="2" BorderBrush="Black">
+    <Grid Background="#A5000000">
         <Grid.RowDefinitions>
-            <RowDefinition  Height="Auto"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
         <RelativePanel>
-            <Button  x:Name="HomeButton"
-                     Content="&#xEA8A;"
-                     FontFamily="Segoe MDL2 Assets"
-                     RelativePanel.AlignLeftWithPanel="True"/>
-            <Image x:Name="aaa" Height="20" Width="20"
-                    RelativePanel.RightOf="HomeButton">
 
-            </Image>
+            <Button Content="&#xEA8A;" RelativePanel.AlignLeftWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets" Width="45" Name ="BackButton" Click="BackButton_Click" />
         </RelativePanel>
-        <Grid Margin="0,0,0,3" Grid.RowSpan="2" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" MinHeight="134" />
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions >
-                <ColumnDefinition Width="230"/>
-                <ColumnDefinition Width="231*"/>
-                <ColumnDefinition Width="335*"/>
-            </Grid.ColumnDefinitions>
+       
+        <SplitView Grid.Row="1" Name="MySplitView"
+                   DisplayMode="CompactInline"
+                   CompactPaneLength="300"
+                   OpenPaneLength="300" 
+                   Background="#A5000000"                    >
+            <SplitView.Pane>
+                <StackPanel x:Name="listStack" 
+                            Orientation="Vertical"
+                            Background="Black">
+                    <Border Background="#A5000000" Margin="0,10,10,10"
+                                Height="35" Width="167" 
+                                HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom">
+                        <TextBlock Text="Cover Picture"
+                                       FontFamily="Segoe UI" FontSize="20" 
+                                       Foreground="#CCFFFFFF" Margin="41,9,0,0" />
+                    </Border>
 
-            <TextBlock  x:Name="HeaderText"
-                       Text="My Photo Album"
-                       FontSize="40"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Center"
-                       Grid.Column="1"  Height="62" Grid.ColumnSpan="2" Margin="61,0,0,0" Width="455"
-                       />
-            <Grid  Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <GridView  x:Name="a"
-                            IsItemClickEnabled="True"
-                            SelectionMode="None"
-                            Grid.Row="0"
-                            ItemsSource="{x:Bind pic2}"
-                            Background="LightBlue"
-                            Margin="5"
-                           ItemClick="a_ItemClick"
-                             >
-                    <GridView.ItemTemplate>
-                        <DataTemplate x:DataType="data:Picture" >
-                            <Image  Name="asdf"
-                                    Width="100" Height="80" 
-                                    Source="{x:Bind PicCategory}"
-                                     Stretch="Fill"
-                                     HorizontalAlignment="Center"
-                                     VerticalAlignment="Center"/>
+                    <ListView    
+                                 Name="CoverPhotoListView"    
+                            
+                                 BorderThickness="1" 
+                                 AllowFocusOnInteraction="True"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Background="#A5000000"
+                                 Grid.Row="0"
+                                 Height="Auto" Width="Auto"
+                                 ItemsSource="{x:Bind CoverPicture}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Picture" >
+                                <StackPanel Orientation="Horizontal" 
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            >
+                                    
+                                    <Ellipse Width="250" Height="200">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{x:Bind PictureFile}" />
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
 
+                   
 
+                    <ListView Name="MenuItemsListView" 
+                          IsItemClickEnabled ="True"
+                          ItemsSource="{x:Bind menuItems}"
+                          ItemClick="MenuItemsListView_ItemClick"
+                          Background="#A5000000">
+                        
+                    <ListView.ItemTemplate> 
+                        <DataTemplate x:DataType="data:MenuItem">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{x:Bind IconFile}" Height="100" Width="100"/>
+                                <TextBlock Text="{x:Bind Category}" FontSize="20" 
+                                           Margin="30,40,10,0" IsColorFontEnabled="True" Foreground="White" />
+                            </StackPanel>
                         </DataTemplate>
-                    </GridView.ItemTemplate>
-
-                </GridView>
-
-                <StackPanel Orientation="vertical"
-                         Grid.Row="1"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Top"
-                         Padding="2"
-                         Width="300"
-                         Background="BlanchedAlmond" 
-                         >
-
-                    <TextBlock Text="sams picture Galary"
-                            FontSize="20"
-                            Margin="20"
-                            Foreground="Brown"
-                            Padding="5"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"/>
-                    <Button x:Name="AllPicButton" 
-                         Content="Show By Category"
-                          HorizontalAlignment="Center"
-                           Margin="0,20,0,0" 
-                            Click="AllPicButton_Click"/>
-
+                    </ListView.ItemTemplate>
+                    
+                </ListView>
                 </StackPanel>
-            </Grid>
-            <GridView  x:Name="PhotoCategory"
-                        Grid.Row="1" Grid.Column="1"
-                        Background="Azure"
-                        IsItemClickEnabled="True"
-                       
-                        ItemsSource="{x:Bind pic}"
-                        ItemClick="PhotoCategory_ItemClick" Margin="0,0,0,111" Grid.ColumnSpan="2" >
-
-                <GridView.ItemTemplate >
-                    <DataTemplate   x:Name="cc" x:DataType="data:Picture">
-                        <Image  Name="aaa"                                Width="80" Height="80"
-                                Source="{x:Bind PictureFile }" 
-                                />
-
-                    </DataTemplate>
-
-                </GridView.ItemTemplate>
-
-            </GridView>
-
-
-
-        </Grid>
-
-
-    </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Background ="Black"/>
+                    <MediaElement Name="MyMediaElement" AutoPlay="True"/>
+                    <TextBlock Name="CategoryTextBlock" FontFamily="Segoe UI" 
+                               Text=" My Albums"  FontStyle="Italic" Foreground="SkyBlue" 
+                               FontSize="50" HorizontalAlignment="Center"/>
+                    <GridView Grid.Row="1"
+                              Name ="PictureGridView"
+                              ItemsSource="{x:Bind pictures}"                        
+                              IsItemClickEnabled="True"
+                              SelectionMode="Extended"
+                              RightTapped="PictureGridView_RightTapped"
+                              ItemClick="PictureGridView_ItemClick" >
+                        <TextBox />
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType ="data:Picture">
+                                <Image Name="MyImage" 
+                                       Stretch="Fill"
+                                       Height="175" Width="175"
+                                       Margin="30, 30, 10, 10"
+                                       Source="{x:Bind PictureFile}" 
+                                        />
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                        
+                    </GridView>
+                    </Grid>
+                </SplitView.Content>
+            </SplitView>      
+     </Grid>
 </Page>

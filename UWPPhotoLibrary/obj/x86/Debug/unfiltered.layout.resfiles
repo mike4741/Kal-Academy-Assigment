@@ -9,7 +9,6 @@ Assets\Pictures\Cooking\Cooking2.png
 Assets\Pictures\Cooking\Cooking3.png
 Assets\Pictures\Cooking\Cooking4.png
 Assets\Pictures\Cooking\Cooking5.png
-Assets\Pictures\Cooking\Holiday1.png
 Assets\Pictures\Family\Family1.png
 Assets\Pictures\Family\Family2.png
 Assets\Pictures\Family\Family3.png
@@ -33,6 +32,6 @@ Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
-SinglePhotos.xbf
+SinglePhotoPage.xbf
 UWPPhotoLibrary.xr.xml
 Properties\Default.rd.xml
