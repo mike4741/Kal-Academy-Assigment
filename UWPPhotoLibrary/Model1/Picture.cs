@@ -19,13 +19,15 @@ namespace UWPPhotoLibrary.Model1
         public PictureCategory Category { get; set; }
         public string AudioFile { get; set; }
         public string PictureFile { get; set; }
+        public string PictureDescription { get; set; }
       
 
-        public Picture( string name , PictureCategory category)
+        public Picture( string name , PictureCategory category, string pictureDescription)
         {
             Name = name;
             Category = category;
-            AudioFile = $"/Assets/Audio/{Category}/{Name}.wav";
+            PictureDescription = pictureDescription;
+            //AudioFile = $"/Assets/Audio/{Category}/{Name}.wav";
             PictureFile = $"/Assets/Pictures/{Category}/{Name}.png";
             
               

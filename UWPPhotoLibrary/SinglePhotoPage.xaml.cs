@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using UWPPhotoLibrary.Model1;
+using System.Diagnostics;
 
 
 
@@ -29,12 +30,15 @@ namespace UWPPhotoLibrary
 
         private ObservableCollection<Picture> singlepic;
         private static string vax;
+        //public List<string> PictureDescriptions;
 
 
         public SinglePhotoPage()
         {
             this.InitializeComponent();
             singlepic = new ObservableCollection<Picture>();
+
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
             //FlipView flipView1 = new FlipView();
             //flipView1.Items.Add(singlepic);
             //flipView1.Items.Add("Family2");
@@ -112,15 +116,55 @@ namespace UWPPhotoLibrary
         private void SinglGrid_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-           // var val = (Picture)e.ClickedItem;
+            // var val = (Picture)e.ClickedItem;
             var pic = (Picture)e.ClickedItem;
             var name = pic.Name;
             //var category = pic.Category;
             PictureManager.GetNextPicture(singlepic, name);
-          
+
 
         }
 
-       
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            //singlepic[0].Name = PictureDescription.Text;
+            DisplayPictureDescription.Text = PictureDescription.Text;
+            singlepic[0].PictureDescription = PictureDescription.Text;
+
+
+        }
+
+        //private static List<Tuple<string, string>> PictureDescriptions() 
+        //{
+        //    var picturedescriptions = new List<Tuple<string , string>>();
+
+        //    picturedescriptions.Add(new Tuple<string, string>("Cooking1", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Cooking2", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Cooking3", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Cooking4", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Cooking5", null));
+
+        //    picturedescriptions.Add(new Tuple<string, string>("Family1", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Family2", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Family3", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Family4", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Family5", null));
+
+        //    picturedescriptions.Add(new Tuple<string, string>("Holiday1", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Holiday2", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Holiday3", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Holiday4", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Holiday5", null));
+
+        //    picturedescriptions.Add(new Tuple<string, string>("Vacation1", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Vacation2", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Vacation3", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Vacation4", null));
+        //    picturedescriptions.Add(new Tuple<string, string>("Vacation5", null));
+
+        //    return picturedescriptions;
+
+        //}
     }
 }

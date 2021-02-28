@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\kal Academy\\Git-kal\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj": {}
+    "C:\\Users\\rmisu\\Documents\\GitHub\\Kal-Academy-Assigment\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj": {}
   },
   "projects": {
-    "D:\\kal Academy\\Git-kal\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj": {
+    "C:\\Users\\rmisu\\Documents\\GitHub\\Kal-Academy-Assigment\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\kal Academy\\Git-kal\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\rmisu\\Documents\\GitHub\\Kal-Academy-Assigment\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj",
         "projectName": "UWPPhotoLibrary",
-        "projectPath": "D:\\kal Academy\\Git-kal\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\kal Academy\\Git-kal\\UWPPhotoLibrary\\obj\\",
+        "projectPath": "C:\\Users\\rmisu\\Documents\\GitHub\\Kal-Academy-Assigment\\UWPPhotoLibrary\\UWPPhotoLibrary.csproj",
+        "packagesPath": "C:\\Users\\rmisu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rmisu\\Documents\\GitHub\\Kal-Academy-Assigment\\UWPPhotoLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rmisu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
