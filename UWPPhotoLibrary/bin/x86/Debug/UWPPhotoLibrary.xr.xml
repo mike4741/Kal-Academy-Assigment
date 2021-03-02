@@ -95,7 +95,6 @@
       <RootProperty Name="Name" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">

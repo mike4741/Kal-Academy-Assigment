@@ -71,7 +71,7 @@
         </GridView>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock x:Name="DisplayPictureDescription" VerticalAlignment="Center" FontSize="25"/>
+            <!--<TextBlock x:Name="DisplayPictureDescription" VerticalAlignment="Center" FontSize="25"/>-->
             <TextBox x:Name="PictureDescription" FontSize="25" Width="Auto" PlaceholderText="Describe your picture" VerticalAlignment="Center"/>
             <Button Content="Save" Click="SaveButton_Click"/>
         </StackPanel>

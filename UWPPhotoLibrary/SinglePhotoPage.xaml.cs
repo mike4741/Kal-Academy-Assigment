@@ -5,6 +5,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using UWPPhotoLibrary.Model1;
 using System.Diagnostics;
+using Windows.UI.Xaml.Data;
 
 
 
@@ -15,7 +16,7 @@ namespace UWPPhotoLibrary
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SinglePhotoPage : Page
+    public sealed partial class SinglePhotoPage : Page 
     {
 
         private ObservableCollection<Picture> singlepic;
@@ -132,7 +133,7 @@ namespace UWPPhotoLibrary
         {
 
             //singlepic[0].Name = PictureDescription.Text;
-            DisplayPictureDescription.Text = PictureDescription.Text;
+            //DisplayPictureDescription.Text = PictureDescription.Text;
             singlepic[0].PictureDescription = PictureDescription.Text;
             for (int i = 0; i < PassedPictureList.Count; i++)
             {
