@@ -102,7 +102,7 @@
                                FontSize="50" HorizontalAlignment="Center"/>
                     <GridView x:ConnectionId='15' Grid.Row="1"
                               Name ="PictureGridView"
-                                                                                     
+                                                                                            
                               IsItemClickEnabled="True"
                               SelectionMode="Extended"
                                                                        

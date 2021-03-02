@@ -131,6 +131,7 @@ namespace UWPPhotoLibrary
             //singlepic[0].Name = PictureDescription.Text;
             DisplayPictureDescription.Text = PictureDescription.Text;
             singlepic[0].PictureDescription = PictureDescription.Text;
+            Debug.WriteLine(singlepic[0].PictureDescription);
 
 
         }

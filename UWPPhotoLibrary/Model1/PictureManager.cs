@@ -27,12 +27,19 @@ namespace UWPPhotoLibrary.Model1
             allPictures.ForEach(picture => pictures.Add(picture));
         }
 
-        public static void GetPicturesByCategory(ObservableCollection<Picture> pictures, PictureCategory category)
+        public static void GetPicturesByCategory(ObservableCollection<Picture> originalpictures, PictureCategory category, ObservableCollection<Picture> changingpictures)
         {
-            var allPictures = getPictures();
-            var filteredPictures = allPictures.Where(picture => picture.Category == category).ToList();
-            pictures.Clear();
-            filteredPictures.ForEach(picture => pictures.Add(picture));
+            //var allPictures = getPictures();
+            //var filteredPictures = allPictures.Where(picture => picture.Category == category).ToList();
+            //pictures.Clear();
+            //filteredPictures.ForEach(picture => pictures.Add(picture));
+
+            //var allPictures = getPictures();
+            var filteredPictures = originalpictures.Where(picture => picture.Category == category).ToList();
+            changingpictures.Clear();
+            //ObservableCollection<Picture> displaypictures = new ObservableCollection<Picture>();
+            filteredPictures.ForEach(picture => changingpictures.Add(picture));
+
         }
 
         internal static void GetCoverPictures(ObservableCollection<Picture> CoverPicture)
@@ -101,7 +108,7 @@ namespace UWPPhotoLibrary.Model1
             pictures.Add(new Picture("Cooking3", PictureCategory.Cooking, null));
             pictures.Add(new Picture("Cooking4", PictureCategory.Cooking, null));
             pictures.Add(new Picture("Cooking5", PictureCategory.Cooking, null));
-
+                 
             pictures.Add(new Picture("Family1", PictureCategory.Family, null));
             pictures.Add(new Picture("Family2", PictureCategory.Family, null));
             pictures.Add(new Picture("Family3", PictureCategory.Family, null));

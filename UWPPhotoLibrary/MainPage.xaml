@@ -102,7 +102,7 @@
                                FontSize="50" HorizontalAlignment="Center"/>
                     <GridView Grid.Row="1"
                               Name ="PictureGridView"
-                              ItemsSource="{x:Bind pictures}"                        
+                              ItemsSource="{x:Bind DisplayPictures}"                        
                               IsItemClickEnabled="True"
                               SelectionMode="Extended"
                               RightTapped="PictureGridView_RightTapped"
