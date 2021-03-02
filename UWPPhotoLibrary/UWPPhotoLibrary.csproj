@@ -125,6 +125,7 @@
     <Compile Include="Model1\MenuItem.cs" />
     <Compile Include="Model1\Picture.cs" />
     <Compile Include="Model1\PictureManager.cs" />
+    <Compile Include="Model1\PictureInfoPass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SinglePhotoPage.xaml.cs">
       <DependentUpon>SinglePhotoPage.xaml</DependentUpon>

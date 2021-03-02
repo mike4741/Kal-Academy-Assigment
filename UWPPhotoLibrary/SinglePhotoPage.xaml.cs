@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using UWPPhotoLibrary.Model1;
@@ -29,7 +19,10 @@ namespace UWPPhotoLibrary
     {
 
         private ObservableCollection<Picture> singlepic;
-        private static string vax;
+        private static string photoname;
+        public PictureInfoPass passedpictureinfo;
+        public ObservableCollection<Picture> PassedPictureList;
+
         //public List<string> PictureDescriptions;
 
 
@@ -46,16 +39,26 @@ namespace UWPPhotoLibrary
         }
 
 
+        //protected override void OnNavigatedTo(NavigationEventArgs e)
+        //{
+
+        //    if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
+        //    {
+        //        vax = e.Parameter.ToString();
+        //        //  greeting.Text = vax;
+        //        PictureManager.GetPictureToSecondPage(singlepic, vax);
+
+        //    }
+
+        //    base.OnNavigatedTo(e);
+        //}
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
-            if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
-            {
-                vax = e.Parameter.ToString();
-                //  greeting.Text = vax;
-                PictureManager.GetPictureToSecondPage(singlepic, vax);
-
-            }
+             passedpictureinfo = (PictureInfoPass)e.Parameter;
+             photoname = passedpictureinfo.SinglePhotoName;
+             PassedPictureList = passedpictureinfo.PassingPhotoList;
+             PictureManager.GetPictureToSecondPage(singlepic, PassedPictureList, photoname);
 
             base.OnNavigatedTo(e);
         }
@@ -113,17 +116,17 @@ namespace UWPPhotoLibrary
             //stackone.Children.Add(flipView1);
         }
 
-        private void SinglGrid_ItemClick(object sender, ItemClickEventArgs e)
-        {
+        //private void SinglGrid_ItemClick(object sender, ItemClickEventArgs e)
+        //{
 
-            // var val = (Picture)e.ClickedItem;
-            var pic = (Picture)e.ClickedItem;
-            var name = pic.Name;
-            //var category = pic.Category;
-            PictureManager.GetNextPicture(singlepic, name);
+        //    // var val = (Picture)e.ClickedItem;
+        //    var pic = (Picture)e.ClickedItem;
+        //    var name = pic.Name;
+        //    //var category = pic.Category;
+        //    PictureManager.GetNextPicture(singlepic, name);
 
 
-        }
+        //}
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -131,8 +134,18 @@ namespace UWPPhotoLibrary
             //singlepic[0].Name = PictureDescription.Text;
             DisplayPictureDescription.Text = PictureDescription.Text;
             singlepic[0].PictureDescription = PictureDescription.Text;
-            Debug.WriteLine(singlepic[0].PictureDescription);
+            for (int i = 0; i < PassedPictureList.Count; i++)
+            {
+                if (singlepic[0].Name == PassedPictureList[i].Name)
+                {
+                    PassedPictureList[i].PictureDescription = singlepic[0].PictureDescription;
+                    //Debug.WriteLine(PassedPictureList[i].PictureDescription);
+                }
+            }
 
+            PictureManager.GetPictureToSecondPage(singlepic, PassedPictureList, photoname);
+            
+            //Debug.WriteLine(singlepic[0].PictureDescription);
 
         }
 

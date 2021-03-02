@@ -58,14 +58,24 @@ namespace UWPPhotoLibrary.Model1
             pictures.Clear();
             filteredPictures.ForEach(pic => pictures.Add(pic));
         }
-        public static void GetPictureToSecondPage(ObservableCollection<Picture> pictures, string picname)
+        //public static void GetPictureToSecondPage(ObservableCollection<Picture> pictures, string picname)
+        //{
+        //    var allpics = getPictures();
+        //    var filteredPictures = allpics.Where(pic => pic.Name == picname).ToList();
+        //    pictures.Clear();
+        //    filteredPictures.ForEach(pic => pictures.Add(pic));
+
+        //}
+
+        public static void GetPictureToSecondPage(ObservableCollection<Picture> singlepic, ObservableCollection<Picture> list, string picname)
         {
-            var allpics = getPictures();
+            var allpics = list;
             var filteredPictures = allpics.Where(pic => pic.Name == picname).ToList();
-            pictures.Clear();
-            filteredPictures.ForEach(pic => pictures.Add(pic));
+            singlepic.Clear();
+            filteredPictures.ForEach(pic => singlepic.Add(pic));
 
         }
+
         public static void GetNextPicture(ObservableCollection<Picture> pictures,
                                             string name)
         {

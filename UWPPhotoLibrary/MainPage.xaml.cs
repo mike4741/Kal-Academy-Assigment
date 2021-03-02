@@ -105,9 +105,11 @@ namespace UWPPhotoLibrary
         {
             //PictureManager.GetAllPictures(pictures);
             //DisplayPictures = PictureList;
-            //SOMETHING needs to change here but I'm not sure what. When I tried the above code the home button disappeared upon click.
+            DisplayPictures.Clear();
+
             for (int i = 0; i < PictureList.Count; i++)
             {
+                
                 DisplayPictures.Add(PictureList[i]);
             }
             CategoryTextBlock.Text = "My Photo Album";
@@ -116,20 +118,31 @@ namespace UWPPhotoLibrary
 
         }
 
+        //private void PictureGridView_ItemClick(object sender, ItemClickEventArgs e)
+        //{
+        //    var val = (Picture)e.ClickedItem;
+
+        //    this.Frame.Navigate(typeof(SinglePhotoPage), val.Name);
+
+        //}
+
         private void PictureGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var val = (Picture)e.ClickedItem;
+            var clickedpicture = (Picture)e.ClickedItem;
             //This is where val.Name is passed to SinglePhotoPage
 
-            this.Frame.Navigate(typeof(SinglePhotoPage), val.Name);
+            PictureInfoPass pictureInfoPass = new PictureInfoPass(clickedpicture.Name, PictureList);
 
-            //this.Frame.Navigate(typeof(SinglePhotoPage), PictureList);
+            //this.Frame.Navigate(typeof(SinglePhotoPage), clickedpicture.Name);
+
+            ////uncomment this when SinglePhotoPage is set up to receive pictureInfoPass
+            this.Frame.Navigate(typeof(SinglePhotoPage), pictureInfoPass);
 
 
         }
 
-     
-      
+
+
         private void PictureGridView_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
             var ReplaceCoverPhotoWith = (e.OriginalSource as FrameworkElement).DataContext as Picture;

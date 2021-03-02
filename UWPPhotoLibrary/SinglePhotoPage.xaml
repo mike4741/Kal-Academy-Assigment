@@ -41,11 +41,13 @@
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
                   Margin="0,60,0,0" 
-                  ItemClick="SinglGrid_ItemClick" 
+                   
                   IsItemClickEnabled="True"
                   >
-               
-            <GridView.ItemTemplate  >
+
+                <!--ItemClick="SinglGrid_ItemClick"-->
+
+                <GridView.ItemTemplate  >
                 
                 <DataTemplate  x:DataType="Data:Picture">
                     <Grid>
