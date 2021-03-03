@@ -20,9 +20,11 @@ namespace UWPPhotoLibrary
     {
 
         private ObservableCollection<Picture> singlepic;
+        public ObservableCollection<Picture> NextPicture;
         private static string photoname;
         public PictureInfoPass passedpictureinfo;
         public ObservableCollection<Picture> PassedPictureList;
+        public string nextName;
 
         //public List<string> PictureDescriptions;
 
@@ -61,37 +63,46 @@ namespace UWPPhotoLibrary
              PassedPictureList = passedpictureinfo.PassingPhotoList;
              PictureManager.GetPictureToSecondPage(singlepic, PassedPictureList, photoname);
 
-            base.OnNavigatedTo(e);
+             base.OnNavigatedTo(e);
         }
 
 
 
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
-        }
+        //private void HomeButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Frame.Navigate(typeof(MainPage));
+        //}
 
-        private void backwardrdbtn_Click(object sender, RoutedEventArgs e)
-        {
+        //private void backwardrdbtn_Click(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
 
-        private void forwardbtn_Click(object sender, RoutedEventArgs e)
-        {
-            //var note = 
-            //int u = singlepic.IndexOf(note);
+        //private void forwardbtn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //var note = 
+        //    //int u = singlepic.IndexOf(note);
 
-            //var name = singlepic[u + 1].Name;
-            //this.Frame.Navigate(typeof(SinglePhotoPage), name);
-            //var _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))
-        }
+        //    //var name = singlepic[u + 1].Name;
+        //    //this.Frame.Navigate(typeof(SinglePhotoPage), name);
+        //    //var _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))
+        //}
 
 
+
+        //private void SinglePhotoHomeButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Frame.Navigate(typeof(MainPage));
+        //}
 
         private void SinglePhotoHomeButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            PictureInfoPass pictureInfoPass = new PictureInfoPass(null, PassedPictureList);
+            this.Frame.Navigate(typeof(MainPage), pictureInfoPass);
         }
+
+        
+
 
         //private void PhotoCatexgory_ItemClick(object sender, ItemClickEventArgs e)
         //{
@@ -117,17 +128,47 @@ namespace UWPPhotoLibrary
             //stackone.Children.Add(flipView1);
         }
 
-        //private void SinglGrid_ItemClick(object sender, ItemClickEventArgs e)
-        //{
+        private void SinglGrid_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-        //    // var val = (Picture)e.ClickedItem;
-        //    var pic = (Picture)e.ClickedItem;
-        //    var name = pic.Name;
-        //    //var category = pic.Category;
-        //    PictureManager.GetNextPicture(singlepic, name);
+            ////    // var val = (Picture)e.ClickedItem;
+            //    var pic = (Picture)e.ClickedItem;
+            //    var name = pic.Name;
+            //    //var category = pic.Category;
+            //    PictureManager.GetNextPicture(singlepic, name);
 
 
-        //}
+
+            for (int i = 0; i < PassedPictureList.Count; i++)
+            {
+
+                if (PassedPictureList[i].Name == singlepic[0].Name)
+                {
+                    if (i == PassedPictureList.Count - 1)
+                    {
+                        i = 0;
+                        nextName = PassedPictureList[i].Name;
+                        break;
+                    }
+                    else
+                    {
+                        nextName = PassedPictureList[i + 1].Name;
+                        break;
+                    }
+                }
+
+            }
+
+            //Debug.WriteLine(nextName);
+
+            PictureManager.GetPictureToSecondPage(singlepic, PassedPictureList, nextName);
+
+            //for (int i = 0; i < PassedPictureList.Count; i++)
+            //{
+
+            //}
+
+        }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -144,7 +185,10 @@ namespace UWPPhotoLibrary
                 }
             }
 
-            PictureManager.GetPictureToSecondPage(singlepic, PassedPictureList, photoname);
+            PictureDescription.Text = string.Empty;
+
+            //PictureManager.GetPictureToSecondPage(singlepic, PassedPictureList, photoname);
+            
             
             //Debug.WriteLine(singlepic[0].PictureDescription);
 

@@ -41,7 +41,7 @@
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
                   Margin="0,60,0,0" 
-                   
+                  ItemClick="SinglGrid_ItemClick"
                   IsItemClickEnabled="True"
                   >
 

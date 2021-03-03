@@ -30,7 +30,9 @@ namespace UWPPhotoLibrary
         private ObservableCollection<Picture> CoverPicture;
         public ObservableCollection<Picture> PictureList;
         public ObservableCollection<Picture> DisplayPictures;
-        
+        public PictureInfoPass passedpictureinfo;
+        public ObservableCollection<Picture> PassedPictureList;
+
 
         public MainPage()
         {
@@ -84,7 +86,21 @@ namespace UWPPhotoLibrary
 
         }
 
-      
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (!(e.Parameter is string))
+            {
+                passedpictureinfo = (PictureInfoPass)e.Parameter;
+                PassedPictureList = passedpictureinfo.PassingPhotoList;
+                PictureList.Clear();
+                for (int i = 0; i < PassedPictureList.Count; i++)
+                {
+                    PictureList.Add(PassedPictureList[i]);
+                }
+            }
+
+            base.OnNavigatedTo(e);
+        }
 
         private void MenuItemsListView_ItemClick(object sender, ItemClickEventArgs e)
         {
