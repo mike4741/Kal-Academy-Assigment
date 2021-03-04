@@ -16,18 +16,14 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace UWPPhotoLibrary
 {
-    /// <summary> final  001
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class MainPage : Page
     {
-        //private ObservableCollection<Picture> pictures;
         private List<MenuItem> menuItems;
-        private ObservableCollection<Picture> CoverPicture;
+        public ObservableCollection<Picture> coverPhoto;
+        public Picture ReplaceCoverPhotoWith { get; set; }
         public ObservableCollection<Picture> PictureList;
         public ObservableCollection<Picture> DisplayPictures;
         public PictureInfoPass passedpictureinfo;
@@ -37,13 +33,11 @@ namespace UWPPhotoLibrary
         public MainPage()
         {
             this.InitializeComponent();
-            //pictures = new ObservableCollection<Picture>();    
-            //PictureManager.GetAllPictures(pictures);
 
             DisplayPictures = new ObservableCollection<Picture>();
 
-            CoverPicture = new ObservableCollection<Picture>();
-            PictureManager.GetCoverPictures(CoverPicture);
+            coverPhoto = new ObservableCollection<Picture>();
+            coverPhoto.Add(new Picture("Cooking1", PictureCategory.Cooking, null));
 
             menuItems = new List<MenuItem>();
             menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Cooking.png", Category = PictureCategory.Cooking });
@@ -104,23 +98,14 @@ namespace UWPPhotoLibrary
 
         private void MenuItemsListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //var menuItem = (MenuItem)e.ClickedItem;
-            //CategoryTextBlock.Text = menuItem.Category.ToString();
-            //PictureManager.GetPicturesByCategory(pictures, menuItem.Category);
-            //BackButton.Visibility = Visibility.Visible;
-
-
             var menuItem = (MenuItem)e.ClickedItem;
             CategoryTextBlock.Text = menuItem.Category.ToString();
             PictureManager.GetPicturesByCategory(PictureList, menuItem.Category, DisplayPictures);
             BackButton.Visibility = Visibility.Visible;
-
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            //PictureManager.GetAllPictures(pictures);
-            //DisplayPictures = PictureList;
             DisplayPictures.Clear();
 
             for (int i = 0; i < PictureList.Count; i++)
@@ -131,41 +116,29 @@ namespace UWPPhotoLibrary
             CategoryTextBlock.Text = "My Photo Album";
             MenuItemsListView.SelectedItem = null;
             BackButton.Visibility = Visibility.Collapsed;
-
         }
-
-        //private void PictureGridView_ItemClick(object sender, ItemClickEventArgs e)
-        //{
-        //    var val = (Picture)e.ClickedItem;
-
-        //    this.Frame.Navigate(typeof(SinglePhotoPage), val.Name);
-
-        //}
 
         private void PictureGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var clickedpicture = (Picture)e.ClickedItem;
-            //This is where val.Name is passed to SinglePhotoPage
-
             PictureInfoPass pictureInfoPass = new PictureInfoPass(clickedpicture.Name, PictureList);
-
-            //this.Frame.Navigate(typeof(SinglePhotoPage), clickedpicture.Name);
-
-            ////uncomment this when SinglePhotoPage is set up to receive pictureInfoPass
             this.Frame.Navigate(typeof(SinglePhotoPage), pictureInfoPass);
-
-
         }
 
+        public void ChangeCoverPhoto(Picture NewCoverPhoto)
+        {
+            for (int i = 0; i < 1; i++)
+            {
 
+                coverPhoto[i] = NewCoverPhoto;
+
+            }
+        }
 
         private void PictureGridView_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
-            var ReplaceCoverPhotoWith = (e.OriginalSource as FrameworkElement).DataContext as Picture;
-            var name = ReplaceCoverPhotoWith.Name;
-           // ttt.Text = name;
-            PictureManager.ChangeCoverPhoto(CoverPicture, name);
-
+            ReplaceCoverPhotoWith = (e.OriginalSource as FrameworkElement).DataContext as Picture;
+            ChangeCoverPhoto(ReplaceCoverPhotoWith);
         }
     }
 }

@@ -50,10 +50,7 @@ namespace UWPPhotoLibrary.Model1
             Name = name;
             Category = category;
             PictureDescription = pictureDescription;
-            //AudioFile = $"/Assets/Audio/{Category}/{Name}.wav";
-            PictureFile = $"/Assets/Pictures/{Category}/{Name}.png";
-            
-              
+            PictureFile = $"/Assets/Pictures/{Category}/{Name}.png";       
         }
 
 

@@ -49,7 +49,7 @@
                                  Background="#A5000000"
                                  Grid.Row="0"
                                  Height="Auto" Width="Auto"
-                                 ItemsSource="{x:Bind CoverPicture}">
+                                 ItemsSource="{x:Bind coverPhoto}">
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="data:Picture" >
                                 <StackPanel Orientation="Horizontal" 

@@ -31,9 +31,9 @@
                      Height="591" 
                      Margin="4,2,4,0" 
                      VerticalAlignment="Center">
-           
-       
-        <GridView x:Name="SinglGrid" Width="500" Height="500"  Grid.Row="1"
+
+
+            <GridView x:Name="SinglGrid" Width="500" Height="500"  Grid.Row="1"
                   BorderBrush="Black" 
                   BorderThickness="1" 
                   ItemsSource="{x:Bind singlepic}"
@@ -45,8 +45,6 @@
                   IsItemClickEnabled="True"
                   >
 
-                <!--ItemClick="SinglGrid_ItemClick"-->
-
                 <GridView.ItemTemplate  >
                 
                 <DataTemplate  x:DataType="Data:Picture">
@@ -54,13 +52,11 @@
                         <Image Width="500" Height="500" 
                                Source="{x:Bind PictureFile }"  
                                Stretch="UniformToFill"
-                                ManipulationCompleted="Image_ManipulationCompleted"
                                 FlowDirection="LeftToRight"/>
-                        <Border Background="#A5000000" 
+                            <Border Background="#A5000000" 
                                 Height="80" 
                                 VerticalAlignment="Bottom">
-                            <!--Change this back to revert to previous functionality, it used to say Binding Name-->
-                            <TextBlock Text="{Binding PictureDescription}"  
+                                <TextBlock Text="{Binding PictureDescription}"  
                                        FontFamily="Segoe UI" FontSize="26.667" 
                                        Foreground="#CCFFFFFF" Padding="15,20"/>
                                 
@@ -71,7 +67,6 @@
         </GridView>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <!--<TextBlock x:Name="DisplayPictureDescription" VerticalAlignment="Center" FontSize="25"/>-->
             <TextBox x:Name="PictureDescription" FontSize="25" Width="Auto" PlaceholderText="Describe your picture" VerticalAlignment="Center"/>
             <Button Content="Save" Click="SaveButton_Click"/>
         </StackPanel>
