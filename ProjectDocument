@@ -1,0 +1,82 @@
+
+1.	Project Concept  
+The objective of this project was to build a photo library where users of the app can build their collection of photos. Allow the user to input a cover image and details of the library.
+
+2.	Project Inception 
+
+The project was created as a part of the Kal Academy Software Development Bootcamp course. 
+●	Inception 0 – Introduction 
+o	Team 2 incorporates three members. 
+o	The team had initial meeting for team members introduction 
+●	Inception 0.1 – Braining storming
+o	Team brainstormed on which application to build from the three options provided by Kal Academy.  
+●	Inception 0.2 – Designing User Interface
+o	Each team member presented sketches/drawings 
+o	Finalized Application UI 
+ 
+3.	Construction of the App
+
+●	App Construction 0 – Basic Structure 
+o	The team build the frame of the application using C# and XAML 
+o	Fist code was pushed to GitHub
+●	App Construction 0.1 – Structure Cleaning Up
+o	Up on this point the team was communicating without a scrum master.
+o	Team appointed scrum master 
+o	The team cleaned up the first code making it ready for features and functionality. 
+●	App Construction 0.2 – Structure Clean Up
+o	Team divided tasks based on functionality 
+o	Collaborated to compile codes
+
+4.	Application Functionality
+
+●	View All Pictures  –  User can view all pictures that live in the asset 
+ 
+
+
+●	Filtering – the photo application has four categories Cooking, Family, Holidays and Vacation. The user can filter pictures from the category menu list. 
+
+ 
+
+●	Home Button – the home button at the upper left corner of the application will allow the user to return to the main page from any filtered page. The home button is not visible on the main page (My Photo Album) since the page is the home page.
+
+ 
+
+
+●	Cover Page – with just a right click on any picture, the user can change the cover picture. 
+
+ 
+
+●	Slide Show – Left click on the picture - it will send the picture to a new page with a larger picture scale. With another left click on the picture, the user can view the next picture in the list.
+
+●	Picture Description – The user can add a picture description of any picture. This description is stored in the PictureDescription property within the Picture class. To accomplish this, the list of pictures is passed between the main page and the single photo page.
+
+ 
+
+5.	Summary 
+
+●	Team Photo Album Application that allows users to view, filter, change cover picture, view picture in a larger scale, and add photo description.
+6.	Challenges 
+
+●	Team2 lost one team member in the middle of the application development process.
+●	Compiling two codes when major change happens on the application that we were not able to push the change made. 
+●	Team members were unsure of when to push their code to GitHub. We all learned a lot about using this tool.
+●	The team struggled to communicate via slack regarding progress on the application. 
+●	The team had difficulty in finding a time to meet every day that worked for everyone. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
