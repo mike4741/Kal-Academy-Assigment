@@ -83,7 +83,6 @@
       <RootProperty Name="Stretch" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FlowDirection" />
-      <RootEvent Name="ManipulationCompleted" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
